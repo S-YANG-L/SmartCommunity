@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">
+		<link rel="stylesheet" type="text/css" href="../css/iuapmobile.um.listview.css">
+		<script src="../js/reset.js"></script>
+		<script src="../js/summer.js" ></script>
+		<script src="../js/jquery.js" ></script>
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../js/knockout.js"></script>
+		<script type="text/javascript" src="../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../js/tenant/payment.js" ></script>
+	</head>
+	<body>
+		<div class="um-win" id="myHome">
+			<div class="um-header header">
+				<a class="um-back" onclick="goHome()"></a>
+				<h3>物业缴费</h3>
+				<a class="um-record" onclick="payRecord()">缴费记录</a>
+			</div>
+			<div class="um-content">
+				<div class="um-listview-wrap" id="listview">
+					<ul class="um-list um-no-active" data-bind="foreach:data">
+						<li class="um-listview-row liborder" onclick="goPays()">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body" style="padding-right:0">
+									
+										<div class="um-xs-8 tl um-text-overflow">
+											<p class="billone" data-bind="text:leaseholdName"></p>
+											<p class="billtwo">
+												<span>开账日期：</span>
+												<span data-bind="text:openDate"></span>  
+											</p>
+											<p class="billthree">
+												<span>开账类型：</span>
+												<span data-bind="text:(billType == '0'?'租金':(billType == '1'?'能源':'其它'))" id="billTypes" ></span>  
+											</p>
+										</div>
+										<div class="um-xs-4 tr">
+												<span class="billstate fr" id="billStatus"><img src="../img/billstate01.png" /></span>
+										</div>								
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

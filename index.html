@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/iuapmobile.um.css">
+		<link rel="stylesheet" href="./css/font-icons.css">
+		<script src="./js/reset.js" ></script>
+		<script src="./js/summer.js" ></script>
+		<script src="./js/jquery.min.js" ></script>
+		<script src="./js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="./js/index.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			<div class="um-header-light" id='header'>
+				
+			</div>
+			<div class="um-content">
+
+			</div>
+			<div class="um-footer" id='footer'>
+				<div class="um-footerbar" id='nav'>
+					<a href="#" class="um-footerbar-item home active" onclick="openTab('home','')">
+						<i class="homeicon"></i>
+						<div class="f12 lh1">首页</div> 
+					</a>
+					<a href="#" class="um-footerbar-item service" onclick="openTab('serverCenter','')"> 
+						<i class="serviceicon"></i>
+						<div class="f12 lh1">服务中心</div> 
+					</a>
+					<a href="#" class="um-footerbar-item message" onclick="openTab('center','')"> 
+						<div class="center-icon" style="height: 0;">
+							<span style="display:none; right:-2px; width: 0.400rem;height: 0.400rem;" class="center-redpoint" data-bind="text:msgNum,visible:msgNum>0" id="s1"></span>
+						</div>
+						<i class="messageicon"></i>
+						<div class="f12 lh1">消息中心</div> 
+					</a>
+					<a href="#" class="um-footerbar-item my" onclick="openTab('my','')"> 
+						<i class="myicon"></i>
+						<div class="f12 lh1">我的</div> 
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

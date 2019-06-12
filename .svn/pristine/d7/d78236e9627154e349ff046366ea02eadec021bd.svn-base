@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">
+		<link rel="stylesheet" href="../css/index.css">
+		<link rel="stylesheet" href="../css/iscroll.css" />
+		
+		<script src="../js/reset.js"></script>
+		<script src="../js/summer.js" ></script>
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../js/tenant/MsgCenter.js" ></script> 
+		
+	</head>
+	<body>
+		<div class="um-win" id="center">
+			<div class="um-header" >	
+				<h3>消息中心</h3>
+			</div>
+			<div class="um-content">
+			
+				<ul class="um-list">
+					<li>
+						<a href="#" class="btn" style="display: inline-block;" onclick="notice()">						
+							<div class="center-icon">
+								<img alt="" src="../img/notice-icon.png">
+								<span style="display: none;" class="center-redpoint" data-bind="text:msgNum,visible:msgNum>0" id="s1"></span>
+							</div>
+							
+							<div class="um-media-body">
+								<h4 class="um-media-heading um-mobilebt32">服务通知</h4>
+							</div> 						
+						</a>
+					</li>
+					<li>
+						<a href="#" class="btn" style="display: inline-block;" onclick="tickling()">
+							<div class="center-icon">
+								<img alt="" src="../img/tickling-icon.png">
+								<span style="display: none;" class="center-redpoint" data-bind="text:msgNum,visible:msgNum>0" id="s2"></span>
+							</div>
+							
+							<div class="um-media-body">
+								<h4 class="um-media-heading um-mobilebt32">消息</h4>
+							</div> 		
+						</a>
+					</li>
+					
+				</ul>
+
+			</div>
+		</div>
+		
+	</body>
+</html>

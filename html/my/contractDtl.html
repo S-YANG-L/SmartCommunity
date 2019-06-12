@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/iscroll.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../../js/tenant/contractDtl.js"></script>		
+	</head>
+	<body>
+        <div class="um-win" id="contractDtl">
+            <div class="um-header" >
+				<a class="um-back" onclick="goBack()"></a>
+				<h3>合同详情</h3>
+			</div>
+
+			<div id="content" class="um-content">
+				<div class="um-noticediv">
+					<div class="noticediv-head">
+						客户信息
+					</div>
+					<ul>
+						<li>
+							<span>客户姓名:</span>
+							<span id="customerName"></span>
+						</li>
+						<li>
+							<span>证件号:</span>
+							<span id="certificateNumber"></span>						
+						</li>
+						<li>
+							<span>联系电话 :</span>
+							<span id="contactNumber"></span>
+						</li>
+						<li>
+							<span>联系地址:</span>
+							<span id="contactAddress"></span>
+						</li>
+					</ul>
+				</div>	
+					
+				<div class="um-noticediv">
+					<div class="noticediv-head">
+						合同信息
+					</div>
+					<ul>
+						<li>
+							<span>合同编号:</span>
+							<span id="contractNumber"></span>
+						</li>
+						<li>
+							<span>合同名称:</span>
+							<span id="contractName"></span>
+						</li>
+						<li>
+							<span>租赁物名称:</span>
+							<span id="leaseName"></span>
+						</li>
+						<li>
+							<span>业务员:</span>
+							<span id="salesman"></span>
+						</li>
+						<li>
+							<span>租期开始时间:</span>
+							<span id="leaseStartDate"></span>
+						</li>
+						<li>
+							<span>租期结束时间:</span>
+							<span id="leaseEndDate"></span>
+						</li>
+						<li>
+							<span>提前开账天数:</span>
+							<span id="advanceOpenDays"></span>
+						</li>
+						<li>
+							<span>下定日期:</span>
+							<span id="fixedRentDate"></span>
+						</li>
+						<li>
+							<span>定金:</span>
+							<span id="earnestMoney"></span>
+						</li>
+						<li>
+							<span>付款方式:</span>
+							<span id="payMentType"></span>
+						</li>
+						<li>
+							<span>缴款账期(天):</span>
+							<span id="paymentDate"></span>
+						</li>
+						<li>
+							<span>租金收取方式:</span>
+							<span id="rentalCollectMode"></span>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="um-noticediv">
+					<div class="noticediv-head">
+						合同附件(可下载)
+					</div>
+					<div class="active" id="listview">
+						<ul class="um-list um-no-active" data-bind="foreach:data">
+							<li class="um-listview-row leaselist">
+									<span data-bind="text:id" style="display: none;"></span>
+									<span data-bind="text:fileName" style="width: 75%;"></span>		
+									<img src="../../img/upload.png" style="width: 15%;line-height: 1.89rem;padding: 0.50rem;float: right;"/>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

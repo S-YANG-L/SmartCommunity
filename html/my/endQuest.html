@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<link rel="stylesheet" href="../../css/tenant/myLeaseRequest.css" />
+		<link rel="stylesheet" href="../../css/iscroll.css" />
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/tenant/myOppoint.js"></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../../js/iscroll.js"></script>
+	</head>
+	<body>
+		<div class="um-page active" id="endQuest">
+			<div class="um-header header" um-water>
+				<h3>我要退租</h3>
+			</div>
+			<div class="um-content">
+				<div class="um-listview-wrap">
+					<ul class="um-list um-no-active" data-bind="foreach:data">
+						<li class="um-listview-row">
+							<a href="#" class="um-list-item um-swipe-action um-no-icon">
+							<div class="um-swipe-btns">
+								<span class="um-swipe-btn um-delete ti-trash"></span>
+							</div>
+							<div class="um-list-item-media">
+								<img alt="" height=74 data-bind="attr:{src: img}">
+							</div>
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body" style="padding-right:5px;">
+									<div data-bind="text:title" class="fb f14 um-text-overflow"></div>
+									<div>
+										<span data-bind="text:detail" class="f14 um-gray listview-detail" style="height:40px;"></span>
+									</div>
+									<div class="f12 tr um-blue">
+										<span data-bind="text:comments"></span>
+									</div>
+								</div>
+							</div> </a>
+						</li>
+					</ul>
+				</div>
+				<form>
+					<div class="um-input-group">
+						<span class="ti-user"></span>
+						<input type="text" class="form-control" placeholder="姓名(必填)">
+					</div>
+					<div class="um-input-group">
+						<span class="ti-user"></span>
+						<input type="text" class="form-control" placeholder="性别(必填)">
+					</div>
+					<div class="um-input-group">
+						<span class="ti-user"></span>
+						<input type="number" class="form-control" value="17863900000">
+					</div>
+					<div class="um-input-group">
+						<span class="ti-user"></span>
+						<input type="datetime-local" name="date" class="form-control" value="2019-03-20T12:00:00" >
+					</div>
+					<div class="um-input-group">
+					<p>给和管家留言</p>
+						<textarea name="" id="" cols="120" rows="15" class="form-control" placeholder="请告诉我们关于你的介绍，或者是期望我们能够提供的服务（最多可输入150字）"></textarea>
+					</div>
+				</form>
+				<button class="btn">
+					提交
+				</button>
+			</div>
+		</div>
+	</body>
+</html>

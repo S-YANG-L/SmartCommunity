@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<link rel="stylesheet" href="../../css/tenant/myLeaseRequest.css" />
+		<link rel="stylesheet" href="../../css/iscroll.css" />
+
+
+        <style>
+        .um-time{
+            background:#ffffff;
+            border-top:1px solid #dddddd;
+            border-bottom:1px solid #dddddd;
+        }
+        .um-time-list{
+            height:46px;
+            line-height: 46px;
+        }
+        .um-time-list:first-child{
+            border-bottom:1px solid #dddddd;
+        }
+        .um-time-txt{
+            float: left;
+            color:#8c8d8e;
+        }
+        .um-time-list .fr{
+            position:relative;
+            float: right;
+            margin-right:30px;
+        }
+        .um-time-list .fr:after{
+            content: "";
+            position:absolute;
+            right:-15px;
+            top:15px;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-right: 2px solid #8c8d8e;
+            border-top: 2px solid #8c8d8e;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .um-time-list input{
+            display:block;
+            width: 180px;
+            height: 45px;
+            line-height:45px;
+            border: none;
+            outline: none;
+            text-align: right;
+            background: #fff;
+        }
+        </style>
+
+
+		
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/tenant/myOppoint.js"></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../../js/iscroll.js"></script>
+
+	</head>
+	<body>
+		<div class="um-page active" id="myLeaseRequest" style="background-color: #efeff4;">
+			<div class="um-header" >
+				<a class="um-back" onclick="goBack()"></a>		
+				<h3>签约信息</h3>
+				
+			</div>
+			
+			<div class="um-content">
+				<div class="um-listview-wrap">
+					<ul class="um-list um-no-active" data-bind="foreach:data">
+						<li class="um-listview-row leaserequestli">
+							<a href="#" class="um-list-item um-swipe-action um-no-icon">
+							<div class="um-swipe-btns">
+								<span class="um-swipe-btn um-delete ti-trash"></span>
+							</div>
+							<div class="um-list-item-media">
+								<img alt=""data-bind="attr:{src: img}">
+							</div>
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body" style="padding-right:5px;">
+									<div data-bind="text:title" class="fb f14 um-text-overflow"></div>
+									<div>
+										<span data-bind="text:detail" class="f14 um-gray listview-detail"></span>
+									</div>
+									<div class="tl um-red leaseprise">
+										<span data-bind="text:comments"></span>
+									</div>
+								</div>
+							</div> </a>
+						</li>
+					</ul>
+				</div>
+				<div class="lease-requestinput">
+					<div class="lease-input">
+						<span>姓名</span>
+						<input type="text" class="um-input-new" value="">
+					</div>
+					<div class="lease-input">
+						<span>性别</span>
+						<div class="lease-sex">
+							<a> 女士</a>
+							<a> 男士</a>
+						</div>
+					</div>
+					<div class="lease-input">
+						<span>身份证号码</span>
+						<input type="number" class="um-input-new" value="">
+					</div>
+					<div class="lease-input">
+						<span>手机号</span>
+						<input type="number" class="um-input-new" value="">
+					</div>
+				
+				</div>
+				<div class="lease-requestinput">
+					<div class="lease-input">
+						<span>开始时间</span>
+						<div class="fr">
+                            <input name="start" id="start" type="text" class="inputnone scroller-date">
+                        </div>                            
+					</div>		
+					<div class="lease-input">
+						<span>结束时间</span>                        
+                         <div class="fr">
+                            <input name="end" id="end" type="text" class="inputnone scroller-date">
+                        </div>                    
+                                            
+					</div>					
+				</div>
+
+				
+				<div style="text-align: center; margin-top:1rem;">
+					<button class="bluebutton">提交</button>
+				</div>
+				
+			</div>
+		</div>
+
+
+
+        <script>
+        	$(function () {
+        		$('.scroller-date').scroller('destroy').scroller({
+        			preset: 'date',
+        			theme: "ios7",
+        			mode: "scroller",
+        			display: "bottom",
+        			animate: ""
+        		});	
+        	});
+        	
+        	function goBack() {
+        		var t = (new Date()).valueOf();
+				summer.openWin({
+					"id" : "leaseInfo"+t,
+					"url" : "html/tenant/leaseInfo.html"
+				});
+			}
+        </script>
+	</body>
+</html>

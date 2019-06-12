@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<link rel="stylesheet" type="text/css" href="../../css/mint.css">
+
+		<style>
+			.msg-info {
+				position: relative;
+			}
+			.msg-info .um-badge {
+				position: absolute;
+				right: -10px;
+				font-size: 12px;
+				top: 6px;
+			}
+			.msg-header {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				background: blue;
+				border-radius: 50%;
+				text-align: center;
+				color: white;
+			}
+			.um-listview-row:active {
+				background-color: #eee;
+			}
+			.mint-cell-value {
+				width: 100%;
+				line-height: 1.5;
+			}
+		</style>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../../js/vue.js"></script>
+		<script type="text/javascript" src="../../js/mint.js"></script>
+		<script src="../../js/tenant/service.js" ></script>
+		
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			<div class="um-header" >
+				<a class="um-back" onclick="goBack()"> 返回</a>
+				<h3>投诉建议</h3>
+			</div>
+			<div class="um-content">
+				<div class="um-listview-wrap" id="listview">
+					<mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" top-pull-text="下拉刷新" top-drop-text="释放刷新" top-loading-text="刷新中..." bottom-pull-text="上拉加载" bottom-drop-text="释放加载" bottom-loading-text="加载中..." ref="loadmore">
+						<ul class="um-list um-no-active">
+							<mt-cell-swipe :right="[{content: '&nbsp;&nbsp;&nbsp;&nbsp;删除&nbsp;&nbsp;&nbsp;',style: {background: '#f44336', color: '#fff', lineHeight:'68px'},handler: function(){deleteItem(index)}}]"
+							v-for="(item, index) in listDatas">
+								<li class="um-listview-row" @click="itemClick(index)" @touchstart="tapHold(index)" @touchmove="cancelTapHold" @touchend="cancelTapHold" onclick="goMyWords(this)">
+									<a href="#" class="um-list-item um-swipe-action um-no-icon">
+									<div class="um-list-item-inner" >
+										<div class="um-list-item-body">
+											<h4 class="um-media-heading fb f16 um-text-overflow">{{ item.complaintContent }}</h4>
+											<p class="um-gray f14 um-text-overflow">
+												{{ item.remark }}
+											</p>
+										</div>
+										<div class="pr10">
+											<span class="um-gray f12">{{ item.draftDate }}</span>
+											<span class="um-gray f12" id="id" style="display: none">{{ item.id }}</span>
+										</div>
+									</div> </a>
+								</li>
+							</mt-cell-swipe>
+						</ul>
+					</mt-loadmore>
+				</div>
+
+			</div>
+		</div>
+
+		<script>
+			</script>
+	</body>
+</html>

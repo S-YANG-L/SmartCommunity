@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="um-frame">
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">
+		<script src="../js/reset.js"></script>
+		<script src="../js/summer.js" ></script>
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../js/tenant/my.js"></script>
+	</head>
+	<body>
+		<div class="um-frame my">
+			<div class="um-myhead">
+				<img src="../img/sun.png" class="um-circle um-img-responsive">
+				<span id="myName"></span>
+			</div>
+				
+				
+				<div class="um-grid um-mytab">
+					<div class="um-grid-row tc um-mytabbody">
+						<div class="um-myiconbox" onclick="myHome()">
+							<a class="um-myicon um-black"> 
+								<img src="../img/myicon01.png"  class="um-img-responsive">
+								<div class="f12 mt5">我的合同</div> 
+							</a>
+						</div>
+					
+						<div class="um-myiconbox" onclick="myCollect()">
+							<a class="um-myicon um-black"> 
+								<img src="../img/myicon02.png"  class="um-img-responsive">
+								<div class="f12 mt5">我的收藏</div> 
+							</a>
+						</div>
+						
+						<div class="um-myiconbox" onclick="myAppoint()">
+							<a class="um-myicon um-black"> 
+								<img src="../img/myicon03.png" class="um-img-responsive">
+								<div class="f12 mt5">我的约看</div> 
+							</a>
+						</div>
+						
+						<div class="um-myiconbox" onclick="goEvaluate()">
+							<a class="um-myicon um-black"> 
+								<img src="../img/myicon04.png" class="um-img-responsive">
+								<div class="f12 mt5">评价</div> 
+							</a>
+						</div>
+						
+						
+					</div>
+				</div>
+
+				<!-- <div class="um-box-justify um-myli" onclick="setUp()">
+					<div class="um-mylibox">
+						<span class="um-myliimg"><img src="../img/my-liimg01.png"></span>
+						<span>客服咨询</span>
+					</div>
+					<div><i class="ti-angle-right"></i></div>
+				</div> -->
+				<div class="um-box-justify um-myli" onclick="goLeaveMessage()">
+					<div class="um-mylibox">
+						<span class="um-myliimg"><img src="../img/my-liimg02.png"></span>
+						<span>投诉建议</span>
+					</div>
+					<div><i class="ti-angle-right"></i></div>
+				</div>
+				<div class="um-box-justify um-myli" onclick="goMyVisitor()">
+					<div class="um-mylibox">
+						<span class="um-myliimg"><img src="../img/my-liimg03.png"></span>
+						<span>我的访客</span>
+					</div>
+					<div><i class="ti-angle-right"></i></div>
+				</div>  
+				<div class="um-box-justify um-myli" onclick="goSetUp()">
+					<div class="um-mylibox">
+						<span class="um-myliimg"><img src="../img/my-liimg04.png"></span>
+						<span>设置</span>
+					</div>
+					<div><i class="ti-angle-right"></i></div>
+				</div>
+			
+		</div>
+	</body>
+</html>

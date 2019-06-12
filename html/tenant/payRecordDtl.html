@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/iscroll.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/tenant/payRecordDtl.js"></script>	
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+	</head>
+	<body>
+		<div id="payRecordDtl" class="um-win" >
+			<div class="um-header" >
+			<a class="um-back" onclick="goBack()"></a>
+				<h3>缴费记录</h3>				
+			</div>
+			
+			<div id="content" class="um-content">
+				<div class="um-noticediv">
+					<div class="noticediv-head">
+						我的账单
+					</div>
+					<ul>
+						<li>
+							<span>已缴金额(元)</span>		
+							<span id="pMoney"></span>	
+						</li>
+						<li>
+							<span>账单编号</span>		
+							<span id="pcode"></span>				
+						</li>
+						<li>
+							<span>用户名称</span> 		
+							<span id="name"></span>				
+						</li>
+						<li>
+							<span>用户地址</span>	
+							<span id="address"></span>				
+						</li>
+						<li>
+							<span>开账日期</span>	
+							<span id="openDate"></span>				
+						</li>
+						<li>
+							<span>缴款日期</span>	
+							<span id="payDate"></span>				
+						</li>
+						<li>
+							<span>缴款截止日期</span>	
+							<span id="endDate"></span>			
+						</li>
+
+					</ul>
+
+				</div>
+					
+				<div class="um-noticediv">
+					<div class="noticediv-head">
+						账单科目
+					</div>
+					<ul class="um-list um-no-active" data-bind="foreach:data">
+						<li class="um-listview-row leaselist">
+								<span data-bind="text:moneyName"></span>		
+								<span data-bind="text:actualReceiptAmount"></span>	
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

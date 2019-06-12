@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">
+		<link rel="stylesheet" href="../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../css/iuapmobile.um.listview.css">
+		<link rel="stylesheet" type="text/css" href="../css/islider.css">
+		<style>
+			.iSlider-wrapper {
+				height: 150px;
+			}
+
+		</style>
+
+		<script src="../js/reset.js"></script>		
+		<script src="../js/summer.js" ></script>
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../js/home.js"></script>
+		<script type="text/javascript" src="../js/islider2.js"></script>
+		<script type="text/javascript" src="../js/knockout.js"></script>
+		<script type="text/javascript" src="../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+
+	</head>
+	<body>
+		<div class="um-frame home"  >
+			<div class="um-header" >
+				<h3>智慧物管</h3>
+			</div>
+			<div class="um-content ">
+				<div class="um-row">
+					<div id="iSlider-wrapper" class="iSlider-wrapper"></div>
+				</div>
+				<div class="um-gridcontent">
+					<ul >
+						<li>
+							<a href="#" class="um-circle um-black"> 
+							<img src="../img/um_propertyicon.png" class="um-img-responsive" alt="物业缴费" onclick="openPay()">
+							<div class="um-messagebt">
+								物业缴费
+							</div> </a>
+						</li>
+						<li>
+							<a href="#" class="um-circle um-black"> 
+							<img src="../img/um_parkicon.png" class="um-img-responsive" alt="停车管理" onclick="openPark()">
+							<div class="um-messagebt">
+								停车管理
+							</div> </a>
+						</li>
+						<li>
+							<a href="#" class="um-circle um-black"> 
+							<img src="../img/um-leaseicon.png" class="um-img-responsive" alt="租赁管理" onclick="openLease()">
+							<div class="um-messagebt">
+								租赁管理
+							</div> </a>
+						</li>
+						<li>
+							<a href="#" class="um-circle um-black"> 
+							<img src="../img/um-visitoricon.png" class="um-img-responsive" alt="智能门禁" onclick="openDoor()">
+							<div class="um-messagebt">
+								访客登记
+							</div> </a>
+						</li>
+						<li>
+							<a href="#" class="um-circle um-black"> 
+							<img src="../img/um-reparicon.png" class="um-img-responsive" alt="报修管理" onclick="openRepair()">
+							<div class="um-messagebt">
+								在线报修
+							</div> </a>
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="um-dynamic">
+					<div class="um-title">
+						<span></span>
+						<p>
+							社区动态
+						</p>
+					</div>
+					<div class="um-subject">
+						<div class="um-subjectleft">
+							<a href="#"> <img src="../img/dynamic01.png" onclick="goNotice()"> </a>
+						</div>
+						<div class="um-subjectright">
+							<a href="#"> <img src="../img/dynamic02.png" onclick="goMails()"> </a>
+							<a href="#"> <img src="../img/dynamic03.png" onclick="goTradingArea()"> </a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="um-service">
+					<div class="um-title"style="display: flex;">
+						<span></span>
+						<p style="width: 50%;">
+							服务中心
+						</p>
+						<p style="width: 50%;text-align: right" onclick="goMore()">
+							更多 >>
+						</p>
+					</div>
+					<div class="um-service" id="server">
+				   <!-- <div class="um-servicelistzt">
+							<ul class="um-list um-no-active" data-bind="foreach:data">
+								<li style="background:#fff;">
+									<a href="#" class="um-list-item um-swipe-action um-no-icon" >
+										<div class="um-servicemsg">
+											<p class="servicep1" data-bind="text:serviceTitle"></p>
+											<p class="servicep2" data-bind="text:serviceContactInformation"><span><img src="../img/phoneicon.png"></span> </p>
+											<p class="servicep3"><img src="../img/service03.png" onclick=""></p>
+										</div>
+										<div class="um-serviceimg">
+											<img src="../img/service01.png">
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+	</body>
+</html>

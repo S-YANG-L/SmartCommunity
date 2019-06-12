@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head><meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/iscroll.css">
+
+		<style>
+			.msg-info {
+				position: relative;
+			}
+			.msg-info .um-badge {
+				position: absolute;
+				right: -10px;
+				font-size: 12px;
+			}
+			.msg-header {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				background: blue;
+				border-radius: 50%;
+				text-align: center;
+				color: white;
+			}
+			.pullDown .pullDownIcon, .pullUp .pullUpIcon {
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				background: url(../../img/pull-icon@2x.png) 0 0 no-repeat;
+				-webkit-background-size: 40px 80px;
+				background-size: 40px 80px;
+				-webkit-transition-property: -webkit-transform;
+				-webkit-transition-duration: 250ms;
+				vertical-align: middle;
+				margin: 0 5px;
+			}
+
+		</style>
+
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script src="../../js/iscroll.js"></script>
+		<script src="../../js/iscrollconfig.js"></script>
+		<script src="../../js/tenant/lease.js"></script>
+</head>
+	<body>
+		<div class="um-win" id="sheQuList">
+			<div class="um-header" >
+				<h3>社区列表</h3>
+			</div>
+			<div class="um-content">
+				<div class="um-listview-wrap" id="listview">
+					<ul class="um-list um-no-active" data-bind="foreach: data">
+						<li class="um-listview-row" onclick="goBefore()">
+							<a href="#" class="um-list-item um-swipe-action um-no-icon">
+							<div class="um-list-item-media msg-info">
+								<span class="um-badge" data-bind="text:msgNum,visible:msgNum>0"></span>
+							</div>
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body">
+									<h4 class="um-media-heading fb f16 um-text-overflow" data-bind="text:sender"></h4>
+									<p class="um-gray f14 um-text-overflow" data-bind="text:lastMsg"></p>
+								</div>
+								<div class="pr10"></div>
+							</div> </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				//Knockout绑定
+				var ViewModel = function() {
+				};
+				var viewModel = new ViewModel();
+				var jsonArray = [{
+					"sender" : "第一社区",
+					"msgNum" : 0,
+					"lastMsg" : "",
+				}, {
+					"sender" : "第二社区",
+					"msgNum" : 0,
+					"lastMsg" : "",
+				}, {
+					"sender" : "第五社区",
+					"msgNum" : 0,
+					"lastMsg" : "",
+				}, {
+					"sender" : "第六社区",
+					"msgNum" : 0,
+					"lastMsg" : "",
+				}, {
+					"sender" : "第七社区",
+					"msgNum" : 0,
+					"lastMsg" : "",
+				}, {
+					"sender" : "第八社区",
+					"msgNum" : 0,
+					"lastMsg" : "",
+				}, {
+					"sender" : "第九社区",
+					"msgNum" : 0,
+					"lastMsg" : "",
+				}];
+
+				viewModel.data = ko.observableArray(jsonArray);
+				ko.applyBindings(viewModel);
+
+				//构造控件实例
+				var listview = UM.listview("#listview");
+			});
+		</script>
+	</body>
+
+</html>

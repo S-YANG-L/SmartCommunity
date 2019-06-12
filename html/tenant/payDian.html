@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		
+	</head>
+	<body>
+		<div id="win" class="um-win" >
+			<div class="um-header header">
+				<a class="um-back" onclick="goPaytype()"></a>
+				<h3>电费详情</h3>
+				
+			</div>
+			<div class="um-content">
+					
+				<div class="um-contentcenter">
+					<div class="um-centerzt">
+						<div class="pay-head">
+							<div class="pay-typeicon">
+								<img src="../../img/pay-icon03.png">
+							</div>
+							<div class="pay-headright">							
+								<p class="payheadone">
+									<span>电费账单总计</span>
+								</p>
+								<p class="pay-red">5000.0元</p>												
+							</div>										
+						</div>
+						<div class="pay-ul">
+							<ul>
+
+								<li>
+									<p>
+										<span>用户编码:</span>
+										<span>060385780</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>用户地址:</span>
+										<span>北店嘉园南区10号楼1206</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>上次抄表日期:</span>
+										<span>2019/01/04</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>本次抄表日期:</span>
+										<span>2019/03/15</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>表位:</span>
+										<span>单表</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>水表起数:</span>
+										<span>1179</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>水表止数:</span>
+										<span>1279</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>本期用水量:</span>
+										<span>48立方米</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>阶梯水价当年累计用水量:</span>
+										<span>50立方米</span>
+									</p>
+								</li>
+								
+							</ul>
+						</div>						
+						</div>
+					
+					</div>
+				<div style="text-align: center;margin-top: 1rem;">
+					<button id="" class="bluebutton" onclick="">确认</button>
+				</div>
+				
+				</div>
+		</div>
+		<script>
+		function goPaytype() {
+			summer.openWin({
+				"id" : "paytype",
+				"url" : "html/tenant/payType.html"
+			});
+		}
+		
+		</script>
+		
+	</body>
+	</body>
+</html>

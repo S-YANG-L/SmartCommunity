@@ -1,0 +1,11 @@
+summerready = function() {
+    $isWeb = true;
+
+}
+function $pageReady() {
+    alert("webview ready");
+}
+
+function goBack() {
+    summer.closeWin({});
+}

@@ -1,0 +1,51 @@
+summerready = function() {
+    $isWeb = true;
+}
+function checkPnone() {
+    var phone = $("#phone").val();
+    var myreg = /^1[3456789]\d{9}$/;
+    if (!myreg.test(phone)) {
+        summer.toast({
+            "msg" : "请输入正确手机号"
+        })
+    } else {
+    //MyInfo/sendCheck    参数：phone
+        alert("获取验证码")
+    }
+};
+function $pageReady() {
+    alert("webview ready");
+}
+
+function goBack() {
+    summer.closeWin({});
+}
+
+function submit() {
+    var phone = $("#phone").val();
+    var check = $("#check").val();
+    var ps1 = $("#ps1").val();
+    var ps2 = $("#ps2").val();
+
+    if (check == null || "".equals(check)) {
+        UM.toast({
+            text : '请输入手机验证码'
+        });
+    } else if (ps1 != ps2) {
+        UM.toast({
+            text : '两次输入密码必须一致'
+        });
+    }
+    //手机短信验证
+    if ($("#phone").val() == "") {
+        alert("空")
+    } else {
+        alert("非空")
+        alert($("#phone").val())
+    }
+    var t = (new Date()).valueOf();
+    summer.openWin({
+        "id" : "checking" + t,
+        "url" : "html/checking.html"
+    });
+}

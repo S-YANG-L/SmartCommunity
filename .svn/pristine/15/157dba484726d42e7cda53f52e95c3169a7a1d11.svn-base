@@ -1,0 +1,139 @@
+﻿function openTab(type,titles){
+    var header = $summer.byId('header');
+    var headerPos = $summer.offset(header);    
+    var footer = $summer.byId('footer');
+    var footerPos = $summer.offset(footer); 
+	
+    var width = $summer.winWidth();//==320
+    var height = $summer.winHeight()-footerPos.h-headerPos.h;//gct:计算frame的高  
+    var title = $summer.byId('#h-title');
+    $summer.html(title,titles);    
+	summer.openFrame({
+		name: type,
+		url: 'html/'+ type +'.html',
+		rect: {
+			x: 0,
+			y: headerPos.h,
+			w: width,
+			h: height,
+		},
+	}); 
+};
+
+summerready=function(){
+		summer.setAppStorage("url","http://192.168.43.224:8085/cmcc")
+//		summer.setAppStorage("url","http://192.168.43.219:9080/cmcc")
+//		summer.setAppStorage("url","http://192.168.43.95:9090/cmcc")
+//		summer.setAppStorage("url","http://106.74.146.162:9080/cmcc")
+//		var tokenEntitys = summer.getStorage("tokenEntity");
+		var tokenEntitys = summer.getAppStorage("tokenEntity");
+//		alert(tokenEntitys);
+		var t = (new Date()).valueOf();
+		if(tokenEntitys == null){
+			summer.openWin({
+				"id" : "signin"+t,
+				"url" : "html/signin.html"
+			});
+		}else{
+			var token = tokenEntitys.token;
+			var tokenExpiryTime = tokenEntitys.tokenExpiryTime;
+			var timestamp = (new Date()).getTime();
+//			alert(token+"-------"+tokenExpiryTime+"====="+timestamp);
+			if(timestamp > tokenExpiryTime){
+				UM.toast({
+			  	  text: 'Token已过期，请重新登录'
+				});
+				var t = (new Date()).valueOf();
+				summer.openWin({
+				"id" : "signin"+t,
+				"url" : "html/signin.html"
+				});
+			}else{
+				openTab('home','智慧社区');
+			}
+			
+		}
+		getNumber1();
+		getNumber2();
+		findAppInfo();
+    } 
+function getNumber1() {
+	var userId = summer.getAppStorage("userId");
+	summer.post(summer.getAppStorage("url") + "/community/getNum", {
+		"token" : summer.getAppStorage("tokenEntity").token,
+		"userId" : userId,
+		"stype" : 1,
+	}, {
+		Authorization : "OAuth2:token"
+	}, function(response) {
+		if ("Token已过期，请重新登录" == response.data) {
+			UM.toast({
+				text : '登录已失效，请重新登录'
+			});
+			var t = (new Date()).valueOf();
+			summer.openWin({
+				"id" : "signin"+t,
+				"url" : "html/signin.html"
+			});
+		}
+		//alert(response.data)
+		response.data = JSON.parse(response.data);
+		var i = response.data.list;
+		if (i != 0) {
+			document.getElementById("s1").style.display = "block";
+		} 
+	});
+};
+
+function getNumber2() {
+	var userId = summer.getAppStorage("userId");
+	summer.post(summer.getAppStorage("url") + "/community/getNum", {
+		"token" : summer.getAppStorage("tokenEntity").token,
+		"userId" : userId,
+		"stype" : 2,
+	}, {
+		Authorization : "OAuth2:token"
+	}, function(response) {
+		if ("Token已过期，请重新登录" == response.data) {
+			UM.toast({
+				text : '登录已失效，请重新登录'
+			});
+			var t = (new Date()).valueOf();
+			summer.openWin({
+				"id" : "signin"+t,
+				"url" : "html/signin.html"
+			});
+		}
+		response.data = JSON.parse(response.data);
+		var i = response.data.list;
+		if (i != 0) {
+			document.getElementById("s1").style.display = "block";
+		} 
+	});
+}
+
+
+function findAppInfo() {
+	summer.post(summer.getAppStorage("url") + "/banner/bannerInfo", {
+		"token" : summer.getAppStorage("tokenEntity").token,
+		"tenantid" : summer.getAppStorage("tenantid"),
+		"appType" : 2,
+	}, {
+		Authorization : "OAuth2:token"
+	}, function(response) {
+		if ("Token已过期，请重新登录" == response.data) {
+			UM.toast({
+				text : '登录已失效，请重新登录'
+			});
+			var t = (new Date()).valueOf();
+			summer.openWin({
+				"id" : "signin"+t,
+				"url" : "html/signin.html"
+			});
+		}
+		response.data = JSON.parse(response.data);
+		var bannerInfo = response.data.bannerInfo;
+		var bannerNum = bannerInfo[0].shufflingFigure;
+		summer.setStorage("bannerNum", bannerNum);	
+	});
+}

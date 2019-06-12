@@ -1,0 +1,263 @@
+.um-screen{
+    position: absolute;
+    top: 0;
+    right: 10px;
+	font-size:0.58rem;
+    color: #000;
+    line-height: 44px;
+    text-decoration: none;
+
+}
+.um-screenbox{
+	width: 14.7rem;
+    height:auto;
+    min-height:3rem;
+    background: #fff;
+    border-radius: 5px;
+	z-index: 99;
+	position: fixed;
+	top:2rem;
+	left:50%;
+	margin-left:-7.35rem;
+	display:none;
+}
+.um-dark {
+    z-index: 97;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    display: none;
+}
+.screen-time{
+	padding: 0.5rem;
+}
+.screen-bt{
+	font-size: 0.628rem;
+    font-weight: bold;
+}
+.screen-price{
+	padding: 0.5rem;
+}
+.screen-input{
+	width:100%;
+	height:1.5rem;
+	text-align: center;
+	line-height:1.5rem;
+}
+.screen-inputleft{
+	display:block;
+	width: 40%;
+	height:100%;
+	float:left;
+	border:1px solid #B7B8B7;
+	border-radius: 5px;
+	overflow:hidden;
+	
+}
+.screen-inputright{
+	display:block;
+	width: 40%;
+	height:100%;
+	float:right;
+	border:1px solid #B7B8B7;
+	border-radius: 5px;
+	overflow:hidden;
+}
+
+.screeninput{
+    width: 100%;
+    height:100%;
+    border:none;
+    outline: none;
+    font-size: 0.64rem;
+	line-height:1.5rem;
+	color:#777;
+}
+
+.screen-if{
+	padding: 0.5rem;
+}
+.condition{
+	overflow:hidden;
+}
+.conditionif{
+	width:3rem;
+	height:1rem;
+	float:left;
+	background: #DFDFDF;
+	/* border:1px solid #DFDFDF; */
+	line-height:1rem;
+	text-align:center;
+	font-size:0.56rem;
+	margin: 0.2rem;
+}
+.conditionifactive{
+/* border:1px solid #1e82d2; */
+	background:#1e82d2;
+	color:#fff;
+}
+
+.bluebutton2{
+	width:10.72rem;
+	height:1.792rem;
+	line-height:1.792rem;
+	font-size:0.64rem;
+	text-align:center;
+	background:url(../img/bluebutton.gif) no-repeat;
+	background-size:cover;
+	border:none;
+	outline: none;
+	margin:0 auto;
+	color:#fff;
+	margin-bottom:0.64rem;
+	overflow: hidden;
+	border-radius:5px;
+}
+
+
+.price-dd-choose {
+	width:100%;
+	padding: 0 0.34rem;
+	height:3rem;
+}
+.price-range {
+width:100%;
+    height: 40px;
+    margin-top: 40px;
+    position: relative;
+}
+.price-range .price-range-slider {
+    width: 100%;
+    height: 6px;
+    overflow: hidden;
+    position: absolute;
+    top: 25px;
+    background-color: #f8f8f8;
+}
+.price-range .bg-darkgrey, .price-range .bg-darkgrey-hand {
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 5px;
+    overflow: hidden;
+}
+.price-range .bg-darkgrey {
+    background-color: #ccd3e4;
+}
+.price-range .bg-darkgrey-hand {
+    cursor: pointer;
+    z-index: 5;
+}
+.price-range .slider-ul {
+    width: 100%;
+    height: 5px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    margin:0;
+}
+.price-range .slider-ul li {
+    width: 10%;
+    height: 10px;
+    float: left;
+    position: relative;
+}
+.price-range .slider-ul li.slider-ul-first {
+    width: 10%;
+}
+.price-range .slider-ul li .icon-dian {
+    width: 3px;
+    height: 5px;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    right: -4px;
+    _top: 1px;
+    background: #fff;
+}
+.price-range .slide-selected {
+    height: 5px;
+    line-height: 0;
+    overflow: hidden;
+    background-color: #328cff;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    z-index: 6;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    cursor: pointer;
+}
+
+.price-range .btn-price {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 21px;
+    z-index: 10;
+    cursor: pointer;
+    background: #328cff;
+    border-radius:50%;
+}
+.price-range .tip {
+    min-width: 100px;
+    max-width: 100px;
+    position: absolute;
+    z-index: 100;
+    padding: 2px;
+    background: url(../img/shadow_bg.png) repeat;
+    font-size: 12px;
+    float: left;
+    top: 40px;
+}
+.price-range .tip .tip-content {
+    min-width: 30px;
+    line-height: 22px;
+    padding: 0 10px;
+    color: #666;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 14px;
+     position: relative;
+    z-index: 1;
+}
+.price-range .tip .tip-arrow {
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    background: url(../img/layer_arrow24.png) no-repeat;
+}
+.price-range .tip .tip-top {
+    width: 15px;
+    height: 11px;
+    top: -8px;
+    left: 38%;
+    background-position: 0 -26px;
+}
+.price-range .price-range-text {
+	width:100%;
+    height: 20px;
+    color: #999;
+}
+.price-range .price-range-text .number {
+    display: inline-block;
+    width: 9%;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+}
+.price-range .price-range-text .number-first {
+    width: 9%;
+}
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../../js/tenant/payType.js" ></script>
+	</head>
+	<body>
+		<div class="um-win" id="index">
+			<div class="um-header" >
+			<a class="um-back" onclick="goPayment()"></a>
+				<h3>我的账单</h3>
+				
+			</div>
+			<div class="um-content">
+				<div class="um-contentcenter">
+					<div class="um-centerzt">	
+					<!-- 头部内容	 -->	
+					<div class="pay-head">
+						<div class="pay-headleft" >
+							<img src="../../img/pay-headicon.png">
+						</div>
+						<div class="pay-headright">							
+							<p class="payheadone">
+								<span>账单缴费总额</span>
+								<span id="type"><img id="oneType">  </span>
+							</p>
+							<p class="billtwo">
+								<span>业主：</span>
+								<span id="yeZhu"></span>  
+							</p>						
+						</div>
+						<div class="pay-headred" id="payMoney"></div>						
+					</div>
+
+					<!-- 列表内容 -->
+					<div class="pay-list" id="listviewTwo">
+						<ul data-bind="foreach:data">
+							<li>								
+									<span class="pay-listicon01"><img id="image1" src="../../img/pay-icon01.png"></span>
+									<span id="span1" class="pay-listtype" data-bind="text:moneyName"></span>
+									<span id="span2" class="pay-listprice" data-bind="text:'￥'+plannedReceiptAmount"></span>
+									<!-- <span class="pay-listmore"><img src="../../img/pay-more.png"></span>	 -->							
+							</li>				
+						</ul>
+					</div>								
+				</div>
+				</div>
+				<div style="text-align: center;margin-top: 1rem;">
+					<button id="" class="bluebutton" onclick="confirmPay()">确认缴费</button>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

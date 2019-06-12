@@ -1,0 +1,762 @@
+
+2019-06-11 20:33:43:
+构建服务器收到用户[suyanglong]构建请求,开始排队构建...
+
+2019-06-11 20:33:43:
+排队完成！开始构建app...
+
+2019-06-11 20:33:43:
+获取到用户配置的构建系统cordova库插件：[cordova-plugin-summer-pay]...
+
+2019-06-11 20:33:43:
+获取到用户配置的系统默认的插件：[cordova-plugin-compat]...
+
+2019-06-11 20:33:43:
+获取到用户配置的构建系统cordova库插件：[cordova-plugin-phonecaller]...
+
+2019-06-11 20:33:43:
+获取到用户配置的系统默认的插件：[cordova-plugin-http]...
+
+2019-06-11 20:33:43:
+获取到用户配置的系统默认的插件：[cordova-plugin-camera]...
+
+2019-06-11 20:33:43:
+获取到用户配置的系统默认的插件：[cordova-plugin-file]...
+
+2019-06-11 20:33:43:
+用户没有配置默认证书，将使用系统默认证书...
+
+2019-06-11 20:33:43:
+获取到构建使用的证书别名：[ump]...
+
+createCordovaProject:
+     [echo] === start create cordova project ===
+     [echo] /usr/local/bin/cordova create /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/project/SmartCommunity
+     [echo] 			com.yonyou.summer.preview 快速预览
+     [echo] 		
+     [exec] Creating a new cordova project.
+     [echo] === end create cordova project ===
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+addPlatform:
+     [echo] add platform
+     [echo] cordova platform add android@/Users/ispace/BuildServer/umpfiles/cordovaLibs/platforms/cordova-android.tgz --save
+     [exec] Using cordova-fetch for cordova-android@/Users/ispace/BuildServer/umpfiles/cordovaLibs/platforms/cordova-android.tgz
+     [exec] Adding android project...
+     [exec] Creating Cordova project for the Android platform:
+     [exec] 	Path: platforms/android
+     [exec] 	Package: com.yonyou.summer.preview
+     [exec] 	Name: ____
+     [exec] 	Activity: MainActivity
+     [exec] 	Android target: android-25
+     [exec] Subproject Path: CordovaLib
+     [exec] Android project created with cordova-android@6.1.2
+     [exec] Discovered plugin "cordova-plugin-whitelist" in config.xml. Adding it to the project
+     [exec] Installing "cordova-plugin-whitelist" for android
+     [exec] 
+     [exec]                This plugin is only applicable for versions of cordova-android greater than 4.0. If you have a previous platform version, you do *not* need this plugin since the whitelist will be built in.
+     [exec]           
+     [exec] Adding cordova-plugin-whitelist to package.json
+     [exec] Saved plugin info for "cordova-plugin-whitelist" to config.xml
+     [exec] --save flag or autosave detected
+     [exec] Saving android@/Users/ispace/BuildServer/umpfiles/cordovaLibs/platforms/cordova-android.tgz into config.xml file ...
+     [echo] === end add platform===
+
+BUILD SUCCESSFUL
+Total time: 1 minute 18 seconds
+
+initCordovaPlugins:
+     [echo] add plugin in cordovaproject
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/common/summer-plugin-apm 
+     [exec] Installing "summer-plugin-apm" for android
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/common/summer-plugin-apm 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/common/summer-plugin-core 
+     [exec] Installing "summer-plugin-core" for android
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/common/summer-plugin-core 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/common/summer-plugin-frame 
+     [exec] Installing "summer-plugin-frame" for android
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/common/summer-plugin-frame 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/common/summer-plugin-service 
+     [exec] Installing "summer-plugin-service" for android
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/common/summer-plugin-service 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/android/common/summer-plugin-android-resource 
+     [exec] Installing "summer-plugin-android-resource" for android
+     [exec] Subproject Path: CordovaLib
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/android/common/summer-plugin-android-resource 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/android/debug/summer-plugin-android-debug 
+     [exec] Installing "summer-plugin-android-debug" for android
+     [exec] Subproject Path: CordovaLib
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/system/android/debug/summer-plugin-android-debug 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-compat 
+     [exec] Installing "cordova-plugin-compat" for android
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-compat 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-file 
+     [exec] Installing "cordova-plugin-file" for android
+     [exec] Plugin dependency "cordova-plugin-compat@1.1.0" already fetched, using that version.
+     [exec] Dependent plugin "cordova-plugin-compat" already installed on android.
+     [exec] 
+     [exec] The Android Persistent storage location now defaults to "Internal". Please check this plugin's README to see if your application needs any changes in its config.xml.
+     [exec] 
+     [exec] If this is a new application no changes are required.
+     [exec] 
+     [exec] If this is an update to an existing application that did not specify an "AndroidPersistentFileLocation" you may need to add:
+     [exec] 
+     [exec]       "<preference name="AndroidPersistentFileLocation" value="Compatibility" />"
+     [exec] 
+     [exec] to config.xml in order for the application to find previously stored files.
+     [exec]         
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-file 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-http 
+     [exec] Installing "cordova-plugin-http" for android
+     [exec] Plugin dependency "cordova-plugin-file@4.3.2" already fetched, using that version.
+     [exec] Dependent plugin "cordova-plugin-file" already installed on android.
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-http 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-camera 
+     [exec] Installing "cordova-plugin-camera" for android
+     [exec] Plugin dependency "cordova-plugin-compat@1.1.0" already fetched, using that version.
+     [exec] Dependent plugin "cordova-plugin-compat" already installed on android.
+     [exec] Subproject Path: CordovaLib
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-camera 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-summer-pay 
+     [exec] Installing "cordova-plugin-summer-pay" for android
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-summer-pay 
+     [echo]  start add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-phonecaller 
+     [exec] Installing "cordova-plugin-phonecaller" for android
+     [echo]  end add plugin /Users/ispace/BuildServer/umpfiles/cordovaLibs/plugins/cordova/cordova-plugin-phonecaller 
+     [echo] === end add plugin ===
+
+BUILD SUCCESSFUL
+Total time: 24 seconds
+
+buildAndroid:
+     [echo] Start Build Android App
+     [echo] /usr/local/bin/cordova build android --release -- --keystore /Users/dongzhk/BuildServer/umpfiles/profile/ump.keystore --alias ump --storePassword 123456 --password umpump
+     [echo] Build base Dir /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/project/SmartCommunity
+     [exec] ANDROID_HOME=/Applications/android-sdk-macosx-r16
+     [exec] JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home
+     [exec] Reading build config file: /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/project/SmartCommunity/build.json
+     [exec] Reading the keystore from: /Users/ispace/BuildServer/umpfiles/profile/32/ump_20170619164555.keystore
+     [exec] Subproject Path: CordovaLib
+     [exec] Starting a new Gradle Daemon for this build (subsequent builds will be faster).
+     [exec] Parallel execution is an incubating feature.
+     [exec] Incremental java compilation is an incubating feature.
+     [exec] :preBuild
+     [exec] :CordovaLib:preBuild
+     [exec] :preBuild UP-TO-DATE
+     [exec] :CordovaLib:preBuild UP-TO-DATE
+     [exec] :preReleaseBuild UP-TO-DATE
+     [exec] :checkReleaseManifest
+     [exec] :CordovaLib:preReleaseBuild UP-TO-DATE
+     [exec] :CordovaLib:checkReleaseManifest
+     [exec] :preDebugBuild UP-TO-DATE
+     [exec] :CordovaLib:prepareReleaseDependencies
+     [exec] :preDebugAndroidTestBuild UP-TO-DATE
+     [exec] :generateReleaseBuildConfig
+     [exec] :CordovaLib:compileReleaseAidl
+     [exec] :generateReleaseResValues
+     [exec] :CordovaLib:compileReleaseNdk UP-TO-DATE
+     [exec] :CordovaLib:compileLint
+     [exec] :incrementalReleaseJavaCompilationSafeguard
+     [exec] :CordovaLib:copyReleaseLint UP-TO-DATE
+     [exec] :CordovaLib:mergeReleaseShaders
+     [exec] :compileReleaseNdk UP-TO-DATE
+     [exec] :mergeReleaseShaders
+     [exec] :CordovaLib:compileReleaseShaders
+     [exec] :compileReleaseShaders
+     [exec] :CordovaLib:generateReleaseAssets
+     [exec] :CordovaLib:mergeReleaseAssets
+     [exec] :generateReleaseAssets
+     [exec] :processReleaseJavaRes
+     [exec] :CordovaLib:mergeReleaseProguardFiles
+     [exec] :processReleaseJavaRes UP-TO-DATE
+     [exec] :validateSigningRelease
+     [exec] :CordovaLib:packageReleaseRenderscript UP-TO-DATE
+     [exec] :CordovaLib:compileReleaseRenderscript
+     [exec] :CordovaLib:generateReleaseResValues
+     [exec] :CordovaLib:generateReleaseResources
+     [exec] :CordovaLib:packageReleaseResources
+     [exec] :CordovaLib:processReleaseManifest
+     [exec] :CordovaLib:generateReleaseBuildConfig
+     [exec] :CordovaLib:processReleaseResources
+     [exec] :CordovaLib:generateReleaseSources
+     [exec] :CordovaLib:incrementalReleaseJavaCompilationSafeguard
+     [exec] :CordovaLib:compileReleaseJavaWithJavac
+     [exec] :CordovaLib:compileReleaseJavaWithJavac - is not incremental (e.g. outputs have changed, no previous execution, etc.).
+     [exec] :CordovaLib:processReleaseJavaRes UP-TO-DATE
+     [exec] :CordovaLib:transformResourcesWithMergeJavaResForRelease
+     [exec] :CordovaLib:transformClassesAndResourcesWithSyncLibJarsForRelease
+     [exec] :CordovaLib:mergeReleaseJniLibFolders
+     [exec] :CordovaLib:transformNative_libsWithMergeJniLibsForRelease
+     [exec] :CordovaLib:transformNative_libsWithSyncJniLibsForRelease
+     [exec] :CordovaLib:bundleRelease
+     [exec] :prepareAndroidCordovaLibUnspecifiedReleaseLibrary
+     [exec] :CordovaLib:preDebugBuild UP-TO-DATE
+     [exec] :CordovaLib:checkDebugManifest
+     [exec] :CordovaLib:prepareDebugDependencies
+     [exec] :CordovaLib:compileDebugAidl
+     [exec] :CordovaLib:compileDebugNdk UP-TO-DATE
+     [exec] :CordovaLib:copyDebugLint UP-TO-DATE
+     [exec] :CordovaLib:mergeDebugShaders
+     [exec] :CordovaLib:compileDebugShaders
+     [exec] :CordovaLib:generateDebugAssets
+     [exec] :CordovaLib:mergeDebugAssets
+     [exec] :CordovaLib:mergeDebugProguardFiles
+     [exec] :CordovaLib:packageDebugRenderscript UP-TO-DATE
+     [exec] :CordovaLib:compileDebugRenderscript
+     [exec] :CordovaLib:generateDebugResValues
+     [exec] :CordovaLib:generateDebugResources
+     [exec] :CordovaLib:packageDebugResources
+     [exec] :CordovaLib:processDebugManifest
+     [exec] :CordovaLib:generateDebugBuildConfig
+     [exec] :CordovaLib:processDebugResources
+     [exec] :CordovaLib:generateDebugSources
+     [exec] :CordovaLib:incrementalDebugJavaCompilationSafeguard
+     [exec] :CordovaLib:compileDebugJavaWithJavac
+     [exec] :CordovaLib:compileDebugJavaWithJavac - is not incremental (e.g. outputs have changed, no previous execution, etc.).
+     [exec] :CordovaLib:processDebugJavaRes UP-TO-DATE
+     [exec] :CordovaLib:transformResourcesWithMergeJavaResForDebug
+     [exec] :CordovaLib:transformClassesAndResourcesWithSyncLibJarsForDebug
+     [exec] :CordovaLib:mergeDebugJniLibFolders
+     [exec] :CordovaLib:transformNative_libsWithMergeJniLibsForDebug
+     [exec] :CordovaLib:transformNative_libsWithSyncJniLibsForDebug
+     [exec] :CordovaLib:bundleDebug
+     [exec] :prepareComAndroidSupportAnimatedVectorDrawable2411Library
+     [exec] :prepareComAndroidSupportAppcompatV72411Library
+     [exec] :prepareComAndroidSupportMultidex101Library
+     [exec] :prepareComAndroidSupportSupportV42411Library
+     [exec] :prepareComAndroidSupportSupportVectorDrawable2411Library
+     [exec] :prepareOrgXutilsXutils3340Library
+     [exec] :prepareSummerlibDebugLibrary
+     [exec] :prepareYyemmsdkLibrary
+     [exec] :prepareYymamsdkLibrary
+     [exec] :prepareYyudaccessorLibrary
+     [exec] :prepareReleaseDependencies
+     [exec] :compileReleaseAidl
+     [exec] :compileReleaseRenderscript
+     [exec] :generateReleaseResources
+     [exec] :mergeReleaseResources
+     [exec] :processReleaseManifest
+     [exec] [:yyemmsdk:] /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/project/SmartCommunity/platforms/android/build/intermediates/exploded-aar/yyemmsdk/AndroidManifest.xml:30:5-79 Warning:
+     [exec] 	Element uses-permission#android.permission.ACCESS_FINE_LOCATION at [:yyemmsdk:] AndroidManifest.xml:30:5-79 duplicated with element declared at [:yyemmsdk:] AndroidManifest.xml:27:5-79
+     [exec] /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/project/SmartCommunity/platforms/android/AndroidManifest.xml:6:5-23:19 Warning:
+     [exec] 	application@android:allowBackup was tagged at AndroidManifest.xml:6 to replace other declarations but no other declaration present
+     [exec] :processReleaseResources
+     [exec] :generateReleaseSources
+     [exec] :compileReleaseJavaWithJavac
+     [exec] :compileReleaseJavaWithJavac - is not incremental (e.g. outputs have changed, no previous execution, etc.).
+     [exec] 注: 某些输入文件使用或覆盖了已过时的 API。
+     [exec] 注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译�:compileReleaseSources
+     [exec] :lintVitalRelease��
+     [exec] 注: /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/project/SmartCommunity/platforms/android/src/org/apache/cordova/file/AssetFilesystem.java使用了未经检查或不安全的操作。
+     [exec] 注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+     [exec] [Fatal Error] :3:214: 与元素类型 "item" 相关联的 "name" 属性值不能包含 '<' 字符。
+     [exec] Could not read /Applications/android-sdk-macosx-r16/platform-tools/api/annotations.zip
+     [exec] java.io.IOException: Could not parse XML from android/accounts/annotations.xml
+     [exec] 	at com.android.tools.lint.ExternalAnnotationRepository$AnnotationsDatabase.initializePackage(ExternalAnnotationRepository.java:906)
+     [exec] 	at com.android.tools.lint.ExternalAnnotationRepository$AnnotationsDatabase.initializeFromJar(ExternalAnnotationRepository.java:849)
+     [exec] 	at com.android.tools.lint.ExternalAnnotationRepository$AnnotationsDatabase.<init>(ExternalAnnotationRepository.java:597)
+     [exec] 	at com.android.tools.lint.ExternalAnnotationRepository.getDatabase(ExternalAnnotationRepository.java:242)
+     [exec] 	at com.android.tools.lint.ExternalAnnotationRepository.create(ExternalAnnotationRepository.java:181)
+     [exec] 	at com.android.tools.lint.ExternalAnnotationRepository.get(ExternalAnnotationRepository.java:162)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiManager.getAnnotationRepository(EcjPsiManager.java:883)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiJavaEvaluator.getAllAnnotations(EcjPsiJavaEvaluator.java:263)
+     [exec] 	at com.android.tools.lint.checks.SupportAnnotationDetector$CallVisitor.checkCall(SupportAnnotationDetector.java:1981)
+     [exec] 	at com.android.tools.lint.checks.SupportAnnotationDetector$CallVisitor.visitCallExpression(SupportAnnotationDetector.java:1966)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitCallExpression(JavaPsiVisitor.java:1029)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitMethodCallExpression(JavaElementVisitor.java:183)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitMethodCallExpression(JavaPsiVisitor.java:1021)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DelegatingPsiVisitor.visitMethodCallExpression(JavaPsiVisitor.java:1667)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiMethodCallExpression.accept(EcjPsiMethodCallExpression.java:40)
+     [exec] 	at com.intellij.psi.JavaRecursiveElementVisitor.visitElement(JavaRecursiveElementVisitor.java:53)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitExpression(JavaElementVisitor.java:103)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitExpression(JavaPsiVisitor.java:800)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitPolyadicExpression(JavaElementVisitor.java:384)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitPolyadicExpression(JavaPsiVisitor.java:1535)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitBinaryExpression(JavaElementVisitor.java:43)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitBinaryExpression(JavaPsiVisitor.java:634)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiBinaryExpression.accept(EcjPsiBinaryExpression.java:58)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiSourceElement.acceptChildren(EcjPsiSourceElement.java:85)
+     [exec] 	at com.intellij.psi.JavaRecursiveElementVisitor.visitElement(JavaRecursiveElementVisitor.java:62)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitStatement(JavaElementVisitor.java:272)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitStatement(JavaPsiVisitor.java:1246)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitIfStatement(JavaElementVisitor.java:135)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitIfStatement(JavaPsiVisitor.java:889)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiIfStatement.accept(EcjPsiIfStatement.java:52)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiSourceElement.acceptChildren(EcjPsiSourceElement.java:85)
+     [exec] 	at com.intellij.psi.JavaRecursiveElementVisitor.visitElement(JavaRecursiveElementVisitor.java:62)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitCodeBlock(JavaElementVisitor.java:67)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitCodeBlock(JavaPsiVisitor.java:701)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiCodeBlock.accept(EcjPsiCodeBlock.java:39)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiSourceElement.acceptChildren(EcjPsiSourceElement.java:85)
+     [exec] 	at com.intellij.psi.JavaRecursiveElementVisitor.visitElement(JavaRecursiveElementVisitor.java:62)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitMethod(JavaElementVisitor.java:179)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitMethod(JavaPsiVisitor.java:1010)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiMethod.accept(EcjPsiMethod.java:105)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiSourceElement.acceptChildren(EcjPsiSourceElement.java:85)
+     [exec] 	at com.intellij.psi.JavaRecursiveElementVisitor.visitElement(JavaRecursiveElementVisitor.java:62)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitClass(JavaElementVisitor.java:55)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitClass(JavaPsiVisitor.java:667)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiClass.accept(EcjPsiClass.java:642)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiSourceElement.acceptChildren(EcjPsiSourceElement.java:85)
+     [exec] 	at com.intellij.psi.JavaRecursiveElementVisitor.visitElement(JavaRecursiveElementVisitor.java:62)
+     [exec] 	at com.intellij.psi.PsiElementVisitor.visitFile(PsiElementVisitor.java:34)
+     [exec] 	at com.intellij.psi.JavaElementVisitor.visitJavaFile(JavaElementVisitor.java:336)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$DispatchPsiVisitor.visitJavaFile(JavaPsiVisitor.java:1411)
+     [exec] 	at com.android.tools.lint.psi.EcjPsiJavaFile.accept(EcjPsiJavaFile.java:111)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor$4.run(JavaPsiVisitor.java:327)
+     [exec] 	at com.android.tools.lint.EcjParser.runReadAction(EcjParser.java:1115)
+     [exec] 	at com.android.tools.lint.client.api.JavaPsiVisitor.visitFile(JavaPsiVisitor.java:321)
+     [exec] 	at com.android.tools.lint.client.api.LintDriver.visitJavaFiles(LintDriver.java:1571)
+     [exec] 	at com.android.tools.lint.client.api.LintDriver.checkJava(LintDriver.java:1551)
+     [exec] 	at com.android.tools.lint.client.api.LintDriver.runFileDetectors(LintDriver.java:1090)
+     [exec] 	at com.android.tools.lint.client.api.LintDriver.checkProject(LintDriver.java:935)
+     [exec] 	at com.android.tools.lint.client.api.LintDriver.analyze(LintDriver.java:454)
+     [exec] 	at com.android.tools.lint.client.api.LintDriver.analyze(LintDriver.java:395)
+     [exec] 	at com.android.tools.lint.LintCliClient.run(LintCliClient.java:131)
+     [exec] 	at com.android.build.gradle.internal.LintGradleClient.run(LintGradleClient.java:146)
+     [exec] 	at com.android.build.gradle.tasks.Lint.runLint(Lint.java:255)
+     [exec] 	at com.android.build.gradle.tasks.Lint.lintSingleVariant(Lint.java:224)
+     [exec] 	at com.android.build.gradle.tasks.Lint.lint(Lint.java:109)
+     [exec] 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+     [exec] 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+     [exec] 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+     [exec] 	at java.lang.reflect.Method.invoke(Method.java:497)
+     [exec] 	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:75)
+     [exec] 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:228)
+     [exec] 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:221)
+     [exec] 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:210)
+     [exec] 	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:621)
+     [exec] 	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:604)
+     [exec] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+     [exec] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+     [exec] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+     [exec] 	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+     [exec] 	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:66)
+     [exec] 	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+     [exec] 	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:52)
+     [exec] 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+     [exec] 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+     [exec] 	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+     [exec] 	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:203)
+     [exec] 	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:185)
+     [exec] 	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:66)
+     [exec] 	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:50)
+     [exec] 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+     [exec] 	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+     [exec] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+     [exec] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+     [exec] 	at java.lang.Thread.run(Thread.java:745)
+     [exec] 
+     [exec] :mergeReleaseAssets
+     [exec] :transformClassesWithJarMergingForRelease
+     [exec] :transformClassesWithMultidexlistForRelease
+     [exec] :transformClassesWithDexForReleasewarning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.android.phone.mrpc.core.d) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably 
+     [exec] :mergeReleaseJniLibFoldersproduced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.android.phone.mrpc.core.f) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.android.phone.mrpc.core.n) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.android.phone.mrpc.core.c) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.android.phone.mrpc.core.e) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.android.phone.mrpc.core.i) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.android.phone.mrpc.core.m) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.apmobilesecuritysdk.common.RushTimeUtil$1) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.apmobilesecuritysdk.f.c) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.apmobilesecuritysdk.face.APSecuritySdk$1) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.apmobilesecuritysdk.face.TMNTokenClient$1) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.b.a.a.b.c) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.b.a.a.c.c) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.b.a.a.e.c) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.app.a) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.app.c) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.app.f) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.app.g) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.app.d) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.app.e) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.app.h) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.auth.c) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.auth.d) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.auth.e) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.auth.f) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.auth.g) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.auth.i) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.authjs.b) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.app.statistic.b) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.data.b) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.auth.a) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.data.d) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.auth.b) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.authjs.e) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.authjs.f) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.util.g) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.util.f) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.util.m) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.util.n) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.widget.b) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.widget.c) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.alipay.sdk.widget.e) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (com.ta.utdid2.a.a.e$1) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (net.lingala.zip4j.util.ArchiveMaintainer$1) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (net.lingala.zip4j.unzip.Unzip$1) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (net.lingala.zip4j.unzip.Unzip$2) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (net.lingala.zip4j.util.ArchiveMaintainer$2) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] warning: Ignoring InnerClasses attribute for an anonymous inner class
+     [exec] (net.lingala.zip4j.zip.ZipEngine$1) that doesn't come with an
+     [exec] associated EnclosingMethod attribute. This class was probably produced by a
+     [exec] compiler that did not target the modern .class file format. The recommended
+     [exec] solution is to recompile the class from source, using an up-to-date compiler
+     [exec] and without specifying any "-target" type options. The consequence of ignoring
+     [exec] this warning is that reflective operations on this class will incorrectly
+     [exec] indicate that it is *not* an inner class.
+     [exec] 
+     [exec] :transformNative_libsWithMergeJniLibsForRelease
+     [exec] :transformResourcesWithMergeJavaResForRelease
+     [exec] :packageRelease
+     [exec] :assembleRelease
+     [exec] :cdvBuildRelease
+     [exec] 
+     [exec] BUILD SUCCESSFUL
+     [exec] 
+     [exec] Total time: 30.62 secs
+     [exec] Built the following apk(s): 
+     [exec] 	/Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/project/SmartCommunity/platforms/android/build/outputs/apk/android-release.apk
+     [echo] End Build Android App
+     [echo] start move apk and asserts
+     [move] Moving 1 file to /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/output/install
+      [zip] Building zip: /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/output/install/SmartCommunity_assets.zip
+     [echo] end move apk and asserts
+     [echo] delete build dir add by dongzhk
+   [delete] Deleting directory /Users/ispace/BuildServer/umpfiles/userfiles/5757/68971/project/SmartCommunity/platforms/android/build
+     [echo] end delete build dir by dongzhk
+
+BUILD SUCCESSFUL
+Total time: 34 seconds

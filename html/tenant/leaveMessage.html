@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title>投诉建议</title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/iscroll.css" />
+		<!-- <link rel="stylesheet" href="../css/weui.css" /> -->
+		<link rel="stylesheet" href="../../css/weui.min.css" />
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/tenant/leaveMessage.js" ></script>
+		<script src="../../js/iscroll.js"></script>
+		<script>
+			$(function() {
+
+			})
+		</script>
+		<style>
+			.um-time{
+            background:#ffffff;
+            border-top:1px solid #dddddd;
+            border-bottom:1px solid #dddddd;
+        }
+        .um-time-list{
+            height:46px;
+            line-height: 46px;
+        }
+        .um-time-list:first-child{
+            border-bottom:1px solid #dddddd;
+        }
+        .um-time-txt{
+            float: left;
+            color:#8c8d8e;
+        }
+        .um-time-list .fr{
+            position:relative;
+            float: right;
+            margin-right:30px;
+        }
+        .um-time-list .fr:after{
+            content: "";
+            position:absolute;
+            right:-15px;
+            top:15px;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border-right: 2px solid #8c8d8e;
+            border-top: 2px solid #8c8d8e;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .um-time-list input{
+            display:block;
+            width: 180px;
+            height: 45px;
+            line-height:45px;
+            border: none;
+            outline: none;
+            text-align: right;
+            background: #fff;
+        }
+        .lease-input span{
+				width:auto;
+				line-height: 2.048rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="um-page active" id="leaveMessage">
+			<div class="um-header header">
+				<a class="um-back" onclick="goBack()"></a>
+				<h3>投诉/建议</h3>
+				<a class="um-record" onclick="myLeaveMessage()"  id="record">记录</a>
+			</div>
+			<div class="um-content" id="all">
+				<div class="door-input">
+					<div class="lease-input">
+						<span>联系地址</span>
+						<input type="text" class="um-input-new" placeholder="请填写您的住址" id="address">
+					</div>
+					<div class="lease-input">
+						<span>房间号</span>
+						<input type="text" class="um-input-new" placeholder="请填写您的房间号" id="uroom">
+					</div>
+					<div class="lease-input">
+						<span>投诉人</span>
+						<input type="text" class="um-input-new" placeholder="请填写您的姓名" id="uname">
+					</div>
+					<div class="lease-input">
+						<span>手机号</span>
+						<input type="number" name="telPhone" class="um-input-new" placeholder="请填写您的手机号" id="uphone">
+					</div>
+					<div class="lease-text">
+						<span>投诉/建议</span><span style="color: red">*</span> 
+						 <textarea name="" id="proposal" class="form-control lease-msgtext" placeholder="请填写您的投诉/建议"></textarea>                                       
+					</div>
+					<div class="lease-text">
+						<span>详细说明</span><span style="color: red">*</span>                        
+                         <textarea name="" id="content" class="form-control lease-msgtext" placeholder="请填写详细说明"></textarea>                                                                
+					</div>
+					<div class="lease-text">
+						<span>备注</span>                     
+                         <textarea name="" id="remark" class="form-control lease-msgtext" placeholder="请填写投诉/建议备注"></textarea>                                                                
+					</div>
+				</div>
+				
+
+				<div style="text-align: center;margin-top: 1.5rem;" id="buts">
+					<button id="" class="bluebutton" onclick="addProposal()">提交建议</button>
+				</div>
+				<!-- <div>
+					<textarea name=""  class="form-control lease-msgtext" style="font-size:14px; color:#F00;" readonly="readonly" onclick="goPhone()">您可以直接点击拨打以下电话号码联系我们:&#10;物管员:17863900862</textarea>          
+				</div> -->
+				<!-- <div class="um-content">
+					<p>
+						您可以直接点击拨打以下电话号码联系我们:
+					</p>
+					<p>
+						物管员
+					</p>
+					<p onclick="phone()">
+						17863900862
+					</p>
+				</div> -->
+			</div>
+			
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.sortlist-2.7.0.css">
+		<link rel="stylesheet" type="text/css" href="../../css/islider.css">
+		<style>
+			.iSlider-wrapper {
+				height: 150px;
+			}
+		</style>
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/jquery.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../../js/swipe.js"></script>
+		<script src="../../js/tenant/leaseInfo.js"></script>
+		<script type="text/javascript" src="../../js/islider2.js"></script>
+		<script type="text/javascript" src="../../js/knockout-2.2.0.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.sortlist-2.7.0.js"></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="leaseInfo">
+			<div class="um-header" >
+				<a class="um-back" onclick="goLease()"></a>
+				<h3>房屋信息</h3>
+			</div>
+			<div class="um-content" style="margin-top: 0.1rem;margin-bottom:2.09rem;" data-bind="foreach:data">
+				<div class="um-row">
+					<div id="iSlider-wrapper" class="iSlider-wrapper"></div>
+				</div>
+				<div class="um-leaseinfomsg">
+					<!-- +villageName+buildingName+houseName -->
+					<span class="um-mobilebt" id="communityName" data-bind="text:communityName"></span>
+					<span class="um-mobilebt" id="villageName" data-bind="text:villageName"></span>
+					<span class="um-mobilebt" id="buildingName" data-bind="text:buildingName"></span>
+					<span class="um-mobilebt" id="unitNumber" data-bind="text:unitNumber"></span>
+					<span class="um-mobilebt" id="houseName" data-bind="text:houseName"></span>
+					<span class="um-mobilebt" style="display: none;" id="communityId" data-bind="text:communityId"></span>
+					<span class="um-mobilebt" style="display: none;" id="villageId" data-bind="text:villageId"></span>
+					<span class="um-mobilebt" style="display: none;" id="buildingId" data-bind="text:buildingId"></span>
+					<span class="um-mobilebt" style="display: none;" id="houseId" data-bind="text:id"></span>
+					<div class="um-leaseinfoprise">
+						<div class="infoprise">
+							<span class="writehui">房租(￥/月)</span>
+							<span class="um-red" data-bind="text:tablePrice" id="fangzu"></span>
+						</div>
+						<div class="infoprise">
+							<span class="writehui">户型</span>
+							<span class="um-red" style="display: none;" data-bind="text:apartmentId" id="apartmentId"></span>
+							<span class="um-red" data-bind="text:apartmentName" id="apartmentName"></span>
+						</div>
+						<div class="infoprise">
+							<span class="writehui">面积(m²)</span>
+							<span class="um-red" data-bind="text:inJacketArea" id="mianji"></span>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="um-leaseinfomsg02">
+					<div class="um-leasetitle">
+						<span></span>
+						<p>
+							基本信息
+						</p>
+					</div>
+					<div class="leaseinfomsg">
+						<ul>
+							<!-- <li><span class="leasehui">朝向</span><span>朝南</span></li> -->
+							<li>
+								<span class="leasehui">楼层</span><span data-bind="text:theFloorNumber+'/'+floorNumber" id="louceng"></span>
+							</li>
+							<li>
+								<span class="leasehui">电梯</span><span data-bind="text:(elevator =='0'?'有':'无')" id="dianti"></span>
+							</li>
+							<li>
+								<span class="leasehui">年代</span><span data-bind="text:builtDate" id="niandai"></span>
+							</li>
+							<li>
+								<span class="leasehui">类型</span><span data-bind="text:roomComposition" id="leixing"></span>
+							</li>
+							<li>
+								<span class="leasehui">绿化</span><span data-bind="text:afforestedArea+'m²'" id="lvhua"></span>
+							</li>
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="um-mobileblock">
+					<div class="um-leasetitle">
+						<span></span>
+						<p>
+							租约信息
+						</p>
+					</div>
+					<div class="leaseinfomsg">
+						<p>
+							<span class="leasehui">入住日期</span><span>可立即入住</span>
+						</p>
+						<p>
+							<span class="leasehui">合同签订步骤</span><span class="leaseblue" onclick="seeProcess()">查看详情</span>
+						</p>
+					</div>
+				</div>
+				<div class="um-mobileblock">
+					<div class="um-leasetitle">
+						<span></span>
+						<p>
+							房源简介
+						</p>
+					</div>
+					<div class="leaseinfobrief ">
+						<p class="um-leasep" data-bind="text:(houseRemark == null?'暂无房源简介':(houseRemark == '' ? '暂无房源简介' : houseRemark))" id="fwjj"></p>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="um-footer" style="position:fixed;bottom:0;width:100%;">
+				<div class="btn-group btn-group-justify">
+					<button type="button" class="btn leasecoll" style="border: 0;" onclick="collecting()">
+						<span class="btn-collection"></span>收藏
+					</button>
+					<button type="button" class="btn leasebtnyellow" style="border: 0;"  onclick="want()">
+						预约看房
+					</button>
+				</div>
+
+			</div>
+		</div>
+		<script>
+			//跳转到房屋信息
+			function goLease() {
+				summer.closeWin({});
+			}
+
+		</script>
+	</body>
+</html>

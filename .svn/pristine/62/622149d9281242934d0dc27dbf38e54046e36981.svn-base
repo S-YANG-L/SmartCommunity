@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">	
+		<script src="../../js/tenant/PayForH5.js" ></script>	
+		<script src="../../js/summer.js" ></script>		
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+	</head>
+	<body>
+		<div class="um-win" id="payForH5">
+			<div class="um-header" >
+				<h3>缴费中</h3>
+			</div>
+
+			<div class="um-content">
+                <ul class="um-list">
+                	<li class="um-list-item">
+                		<div class="um-list-item-inner">
+                			<div class="um-list-item-body">
+                				<input type="text" class="form-control" placeholder="此处为账单编号">
+                			</div>
+                		</div>
+                	</li>
+                	<li class="um-list-item">
+                		<div class="um-list-item-inner">
+                			<div class="um-list-item-body">
+                				<input type="number" class="form-control" placeholder="此处未缴费金额">
+                			</div>
+                		</div>
+                	</li>
+                </ul>
+                <div class="um-row">
+                	<button class="um-btn um-no-brs">确认</button>
+                </div>
+
+			</div>
+		</div>
+	</body>
+</html>

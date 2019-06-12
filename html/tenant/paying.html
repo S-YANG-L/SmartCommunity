@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/tenant/paying.js" ></script>
+
+	</head>
+	<body>
+		<div id="win" class="um-win" >
+			<div class="um-header header">
+				<a class="um-back" onclick="goPaytype()"></a>
+				<h3>立即缴费</h3>
+				
+			</div>
+			<div class="um-content">
+					
+				<div class="um-contentcenter">
+					<div class="um-centerzt">
+						<div class="pay-head">
+							<div class="pay-typeicon">
+								<img src="../../img/pay-icon03.png">
+							</div>
+							<div class="pay-headright">							
+								<p class="payheadone">
+									<span>账单总计(元)</span>
+								</p>
+								<p class="pay-red" id="totalSum"></p>												
+							</div>										
+						</div>
+						<div class="pay-ul">
+							<ul>
+								<li>
+									<p>
+										<span>账单编码:</span>
+										<span id="billNumber"></span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>用户名称:</span>
+										<span id="customerName"></span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>用户地址:</span>
+										<span id="customerAddress"></span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>开账日期:</span>
+										<span id="openDate"></span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>缴款截止日:</span>
+										<span id="endPayingDate"></span>
+									</p>
+								</li>								
+							</ul>
+						</div>						
+						</div>
+					
+					</div>
+				<div style="text-align: center;margin-top: 1rem;">
+					<button id="" class="bluebutton" onclick="nowPay()">立刻缴费</button>
+				</div>
+				
+				</div>
+		</div>
+		<script>
+		function goPaytype() {
+			var t = (new Date()).valueOf();
+			summer.openWin({
+				"id" : "paytype"+t,
+				"url" : "html/tenant/payType.html"
+			});
+		}
+		
+		</script>
+		
+	</body>
+</html>

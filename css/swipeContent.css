@@ -1,0 +1,50 @@
+.swipe {
+	margin-left: -15px;
+	margin-right: -15px;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+.swipe-adaptation {
+	display: -webkit-box;
+	display: box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	overflow-y: hidden;
+}
+
+.swipe-wrap {
+	height: 100%;
+	overflow-y: hidden;
+}
+
+.swipe-wrap > div {
+	float: left;
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+	position: relative;
+	display: -webkit-box;
+	display: box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+.swipe-wrap > div > .swipe-words {
+	-webkit-box-flex: 1;
+	box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	width:100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}

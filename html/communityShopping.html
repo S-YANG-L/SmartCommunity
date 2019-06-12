@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title>社区商圈</title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">
+		<link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/iuapmobile.um.listview.css">
+        <link rel="stylesheet" href="../css/iscroll.css" />
+		<link rel="stylesheet" href="../css/screen.css">
+        <script src="../js/reset.js"></script>
+
+        <style>
+        	.listview-detail {
+        		overflow: hidden;
+        		text-overflow: ellipsis;
+        		display: -webkit-box;
+        		-webkit-line-clamp: 2;
+        		-webkit-box-orient: vertical;
+        	}
+        	.um-listview-row{
+				border-top:1px solid #f0f0f0;
+			}
+        </style>
+
+		<script src="../js/summer.js" ></script>
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+        <script type="text/javascript" src="../js/knockout.js"></script>
+        <script type="text/javascript" src="../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+        <!-- <script src="../js/tenant/community.js" ></script> -->
+        <script src="../js/iscroll.js"></script>
+		<script src="../js/iscrollconfig.js"></script>
+        <script src="../js/tenant/communityShopping.js" ></script>
+	</head>
+	<body>
+		<div class="um-win" id="lease">
+			<!-- <div class="um-header" onclick="goShequList()">			
+				选择社区				
+			</div> -->
+			<div class="um-header">	
+				<a class="um-back" onclick="goHome()"></a>		
+				<h3>社区商圈</h3>	
+				<a class="um-screen" >筛选</a>			
+			</div>
+			<div class="um-screenbox">
+			
+				<!-- 时间筛选 -->
+				<div class="screen-time">
+					<span class="screen-bt">时间筛选</span>
+					<div class="lease-input">
+						<span>开始时间</span>
+						<div class="fr">
+                            <input  id="start" type="text" class="inputnone scroller-date">
+                        </div>                            
+					</div>		
+					<div class="lease-input">
+						<span>结束时间</span>                        
+                         <div class="fr">                            
+                            <input  id="end" type="text" class="inputnone scroller-date">
+                        </div>                                                                
+					</div>
+				</div>
+				<div style="text-align: center;margin-top: 0.5rem;">
+					<div style="display: flex;width: 80%;margin: auto;">
+						<button style="margin-left: 0.5rem;margin-right: 0.5rem" class="bluebutton2" type="submit" onclick="check()">确定</button>
+						<button style="margin-left: 0.5rem;margin-right: 0.5rem" class="bluebutton2" type="submit" onclick="formReset()">重置</button>
+					</div>
+				</div>	
+							
+			</div>
+			<div class="um-dark"></div>
+			
+			<div style="background:#fff;margin-top:0.34rem;">
+                
+                <div class="um-listview-wrap" id="listview">
+                	<ul class="um-list um-no-active" id="s1">
+                		
+                	</ul>
+                </div>
+
+			</div>
+		</div>
+		<script>
+		$(function () {
+        		$('.scroller-date').scroller('destroy').scroller({
+        			preset: 'datetime',
+        			theme: "ios7",
+        			mode: "scroller",
+        			display: "bottom",
+        			animate: ""
+        		});	
+        		
+        		$(".conditionif").click(function(){       			
+					$(this).toggleClass('conditionifactive');
+		        });
+		        $('.um-screen').click(function(){
+					$('.um-dark').fadeIn(100);
+					$('.um-screenbox').slideDown(200);
+			
+				})	
+				$('.um-dark').click(function(){
+					$('.um-dark').fadeOut(100);
+					$('.um-screenbox').slideUp(200);
+				})
+        	});
+        	
+        	
+		
+		</script>
+	</body>
+
+</html>

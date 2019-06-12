@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/tenant/repair.js"></script>
+		<script>
+			$(function() {
+
+			})
+		</script>
+		<style>
+			.um-list .um-list-item-left {
+				width: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="um-page active" id="repairBillDtl">
+			<div class="um-header header" um-water>
+				<a class="um-back" onclick="goBackRd()"></a>
+				<h3>维修评价</h3>
+			</div>
+			<div class="um-content">
+				<form action="" >
+					<ul class="um-list f14">
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									报修人
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control" value="liushihao"> 
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									房屋信息
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control" value="某社区某小区某号楼某单元某房间">
+								</div>
+							</div>
+						</li>
+
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									报修内容
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control" value="窗子下雨天渗水">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									开始时间
+								</div>
+								<div class="um-list-item-right">
+									<input type="datetime-local" name="date" class="form-control">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									结束时间
+								</div>
+								<div class="um-list-item-right">
+									<input type="datetime-local" name="date" class="form-control">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left mr10 tr">
+									是否支持自动派单
+								</div>
+								<div class="um-list-item-right">
+									<label class="um-switch1">
+										<input type="checkbox" value="">
+										<div class="um-track">
+											<div class="um-handle"></div>
+										</div> </label>
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									工作人员
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control" value="xiaoming">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</form>				
+                <button class="btn" onclick="goEvaluate()">去评价</button>
+			</div>
+		</div>
+	</body>
+</html>

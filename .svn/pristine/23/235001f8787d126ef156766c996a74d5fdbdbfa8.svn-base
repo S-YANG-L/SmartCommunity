@@ -1,0 +1,3 @@
+function goback(){
+	 summer.closeWin({});
+}

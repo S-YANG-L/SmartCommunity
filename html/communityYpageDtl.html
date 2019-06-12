@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../css/weui.min.css" />
+
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../js/tenant/communityYpageDtl.js" ></script>
+		<style>
+			.um-list .um-list-item-left {
+				width: 60px;
+			}
+		</style>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="noticeListDtl">
+			<div class="um-header" >
+				<a class="um-back" onclick="goBack()"></a>
+				<h3>社区黄页详情</h3>
+			</div>
+
+			<div class="door-input">
+				<div class="lease-text" style="display: none">
+					<span>id:</span>
+					<span id="id"></span>
+				</div>
+				<div class="lease-text">
+					<span>标题:</span>
+					<span id="title"></span>
+				</div>
+				<div class="lease-text">
+					<span>发布时间:</span>
+					<span id="date"></span>
+				</div>
+				<div class="lease-text">
+					<span>图片:</span>
+					<div class="page__bd">
+					        <div class="weui-gallery" id="gallery">
+					            <span class="weui-gallery__img" id="galleryImg"></span>
+					        </div>					
+					        <div class="weui-cell__bd">
+					            <div class="weui-uploader">									
+					                <div class="weui-uploader__bd">
+					                    <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+					                </div>
+					            </div>
+					        </div>										
+					</div> 
+				</div>
+				<div class="lease-text">
+					<span>内容:</span>
+					<span id="cont"></span>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

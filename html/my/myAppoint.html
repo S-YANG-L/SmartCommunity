@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>			
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/tenant/myAppoint.js" ></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+        <script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<style>
+        	div.Artical>div {
+				display:none;				
+			}
+			div.Artical>div.active {
+				display:block;
+			}
+			.listview-detail {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+			.um-listview-row{
+				border-top:1px solid #f0f0f0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="um-win" id="myAppoint">
+			
+			<div class="um-header" id="re-head">
+				<a class="um-back" onclick="goBack()" ></a>
+				<h3>我的约看</h3>
+			</div>
+			
+			
+			<div class="um-content" style="margin-top:0;">				
+                <ul class="um-tabbar um-tabbar-underline2 pt10 pb10 um-tabbar-switch" style="background: #fff;">
+                	<li class="active" data-tar='.ended'><a>未完成约看</a><span></span></li>
+                	<li data-tar='.end'><a onclick="datesourses()">已完成约看</a><span></span></li>
+                </ul>
+                
+                <div class="Artical" >  
+                	<div class="ended active" id="listview1"> 
+	                	<ul class="um-list um-no-active" data-bind="foreach:data">
+	                		<li class="um-listview-row leaselist" style="background:#fff;" onclick="goDetail1()">
+	                			<a class="um-list-item um-swipe-action um-no-icon">
+	                	
+	                				<div class="um-list-item-media">
+	                					<img alt="" data-bind="attr:{src:(imgUrl == null ? '../../img/fw3.png' : imgUrl)}">
+	                				</div>
+	                				<div class="um-list-item-inner">
+	                					<div class="um-list-item-body" style="padding-right:5px;">
+	                						<div data-bind="text:houseName" class="um-text-overflow leasebt"></div>
+	                						<div style="display: none;" data-bind="text:houseId" id="oneId"></div>
+	                						<div>
+	                							<span data-bind="text:inJacketArea+'|'+apartmentName" class="f14 um-gray listview-detail"></span>
+	                							
+	                						</div>      
+	                						<div class="tl um-red leaseprise">
+	                							<span data-bind="text:tablePrice+'/月'"></span>
+	                						</div>
+	                						<div class="tr">
+	                							<span data-bind="text:(status =='0'?'待审批':(status =='1'?'已通过':'已拒绝'))" style="color: #1e82d2;font-size: 14px;"></span>
+	                						</div>
+	                					</div>
+	                				</div>
+	                			</a>
+	                		</li>
+	                	</ul> 
+                	</div>
+                	
+                	<div class="end" id="listview2"> 
+                	 <ul class="um-list um-no-active" data-bind="foreach:cont">
+	                		<li class="um-listview-row leaselist" style="background:#fff;" onclick="goDetail2()">
+	                			<a class="um-list-item um-swipe-action um-no-icon">
+	                	
+	                				<div class="um-list-item-media">
+	                					<img alt="" data-bind="attr:{src:(imgUrl == null ? '../../img/fw3.png' : imgUrl)}">
+	                				</div>
+	                				<div class="um-list-item-inner">
+	                					<div class="um-list-item-body" style="padding-right:5px;">
+	                						<div data-bind="text:houseName" class="um-text-overflow leasebt"></div>
+	                						<div style="display: none;" data-bind="text:houseId" id="twoId"></div>
+	                						<div>
+	                							<span data-bind="text:inJacketArea+'|'+apartmentName" class="f14 um-gray listview-detail"></span>	                							
+	                						</div>      
+	                						<div class="tl um-red leaseprise">
+	                							<span data-bind="text:tablePrice+'/月'"></span>
+	                						</div>
+	                						<div class="tr">
+	                							<span data-bind="text:(status =='0'?'待审批':(status =='1'?'已通过':'已拒绝'))" style="color: #1e82d2;font-size: 14px;"></span>
+	                						</div>
+	                					</div>
+	                				</div>
+	                			</a>
+	                		</li>
+	                	</ul> 
+                	</div>
+                </div>
+            </div>
+		</div>	
+		<script>           
+        	$(function () {			 
+        		 /*导航更换js*/
+        		 $('ul.um-tabbar-switch  Li').click(function(){
+        			$(this).addClass('active').siblings('.active').removeClass('active');
+        			var tar=$(this).attr('data-tar');
+        			$(tar).addClass('active').siblings('.active').removeClass('active');
+        		}); 
+        		
+        	});
+        </script>		
+	</body>
+</html>

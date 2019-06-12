@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../../js/tenant/houseInfo.js" ></script>
+	</head>
+	<body>
+		<div class="um-win" id="myHome">
+			<div class="um-header" >
+				<a class="um-back" onclick="goBack()"></a>
+				<h3>我的合同</h3>
+			</div>
+
+			<div class="um-content">
+				<div class="unread active" id="listview">
+					<ul class="um-list um-no-active" data-bind="foreach:data">
+						<li class="um-listview-row um-limarginbottom" style="background:#fff;padding:0;padding:0 0.64rem;" onclick="goContractDtl()">
+							<a class="um-swipe-action um-no-icon">
+                				<div class="my-homebt">
+                					<span class="my-homebtleft" data-bind="text:contractNumber"></span>
+                					<span class="my-homebtright" data-bind="text:(contractStatus=='0'?'待审批':(contractStatus=='3'?'已生效':'已作废'))"></span>
+                				</div>
+                				<div class="my-homeli">               				
+	                				<div class="um-list-item-media3" style="margin-top:0.45rem;">
+	                					<img data-bind="attr:{src:(imgUrl == null ? '../../img/fw3.png' : imgUrl)}">
+	                				</div>
+	                				<div class="um-list-item-inner">
+	                					<div>
+	                						<div data-bind="text:contractName" class=" leasebt" style="height: 2rem;"></div>
+	                						<div>
+	                							<span data-bind="text:leaseStartDate" class="f14 um-gray listview-detail"></span>
+	                							至
+	                							<span data-bind="text:leaseEndDate" class="f14 um-gray listview-detail"></span>
+	                						</div>         
+	                						<div class="tl um-red leaseprise">
+	                							<span data-bind="text:tablePrice+'/月'"></span>
+	                						</div>
+	                					</div>
+	                				</div>
+                				</div>
+                			</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

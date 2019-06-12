@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/iscroll.css" />
+		<link rel="stylesheet" href="../../css/screen.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<style>
+			/* #orders {
+				padding-top: 40px;
+			} */
+			.um-text-overflow {
+				padding-right: 30px
+			}
+			div.notice-body>div {
+        		display:none;
+        		color:#555;
+        	}
+        	div.notice-body>div.active {
+        		display:block;
+        	}    
+		</style>
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/iscroll.js"></script>
+		<script src="../../js/iscrollconfig.js"></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../../js/tenant/leaveList.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="leaveList">
+			<div class="um-header" >
+				<a class="um-back" onclick="goBack()"></a>
+				<h3>投诉建议</h3>	
+				<a class="um-screen" >筛选</a>				
+			</div>
+			
+			<div class="um-screenbox">
+			
+				<!-- 时间筛选 -->
+				<div class="screen-time">
+					<span class="screen-bt">时间筛选</span>
+					<div class="lease-input">
+						<span>开始时间</span>
+						<div class="fr">
+                            <input  id="start" type="text" class="inputnone scroller-date">
+                        </div>                            
+					</div>		
+					<div class="lease-input">
+						<span>结束时间</span>                        
+                         <div class="fr">                            
+                            <input  id="end" type="text" class="inputnone scroller-date">
+                        </div>                                                                
+					</div>
+				</div>
+				<div style="text-align: center;margin-top: 0.5rem;">
+					<div style="display: flex;width: 80%;margin: auto;">
+						<button style="margin-left: 0.5rem;margin-right: 0.5rem" class="bluebutton2" type="submit" onclick="check()">确定</button>
+						<button style="margin-left: 0.5rem;margin-right: 0.5rem" class="bluebutton2" type="submit" onclick="formReset()">重置</button>
+					</div>
+				</div>	
+							
+			</div>
+			<div class="um-dark"></div>
+
+			<div id="orders">
+			
+				<ul class="um-tabbar um-tabbar-underline2 pt10 pb10 um-tabbar-switch" style="background: #fff;">
+                	<li class="active" data-tar='.unread'><a>已提报</a><span></span></li>
+                	<li data-tar='.read'><a onclick="getRepairs()">已完成</a><span></span></li>                	
+                </ul>
+				 <div class="notice-body">        
+                	<div class="unread active" id="listview">
+						<ul class="um-no-active" data-bind="foreach: data" id="s1">
+						</ul>               	
+                	</div>
+                	<div class="read" id="listview2">
+                		<ul class="um-no-active" data-bind="foreach: data2" id="s2">
+						</ul>  
+					</div>   		
+                </div>
+
+
+			</div>
+		</div>
+		<script type="text/javascript">
+		$(function () {
+        		$('.scroller-date').scroller('destroy').scroller({
+        			preset: 'datetime',
+        			theme: "ios7",
+        			mode: "scroller",
+        			display: "bottom",
+        			animate: ""
+        		});	
+        		
+        		$(".conditionif").click(function(){       			
+					$(this).toggleClass('conditionifactive');
+		        });
+		        $('.um-screen').click(function(){
+					$('.um-dark').fadeIn(100);
+					$('.um-screenbox').slideDown(200);
+			
+				})	
+				$('.um-dark').click(function(){
+					$('.um-dark').fadeOut(100);
+					$('.um-screenbox').slideUp(200);
+				})
+        	});
+        	
+        	
+		
+		</script>
+		<script>
+        	$(function () {			 
+        		 /*导航更换js*/
+        		 $('ul.um-tabbar-switch  Li').click(function(){
+        			$(this).addClass('active').siblings('.active').removeClass('active');
+        			var tar=$(this).attr('data-tar');
+        			$(tar).addClass('active').siblings('.active').removeClass('active');
+        		}); 
+        	});
+        </script>
+	</body>
+</html>

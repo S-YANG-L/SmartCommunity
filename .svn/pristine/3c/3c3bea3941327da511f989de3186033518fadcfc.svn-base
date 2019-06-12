@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../js/summer.js" ></script>
+		<script src="../js/tenant/repair.js"></script>
+		<script>
+			$(function() {
+
+			})
+		</script>
+		<style>
+			.um-list .um-list-item-left {
+				width: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="um-page active" id="myDoors">
+			<div class="um-header header" um-water>
+				<a class="um-back" onclick="goBack()"></a>
+				<h3>智能门禁</h3>
+			</div>
+			<div class="um-content">
+				<form action="" >
+					<ul class="um-list f14" >
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									被访人
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control"placeholder="请填写被访人姓名">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									被访人房屋
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control"placeholder="请填写被访人房屋信息">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									申请人
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control"placeholder="请填写您的姓名">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr8">
+									申请人手机号
+								</div>
+								<div class="um-list-item-right">
+									<input type="number" class="form-control" placeholder="请填写您的手机号" >
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									申请证件
+								</div>
+								<div class="um-list-item-right">
+									<select class="form-control">
+										<option value="">--请选择您的证件--</option>
+										<option value="身份证">身份证</option>
+									</select>
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									证件号
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control"placeholder="请填写您的证件号码">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									申请人车牌号
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control"placeholder="请填写您的车牌号">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									开始拜访时间
+								</div>
+								<div class="um-list-item-right">
+									<input type="datetime-local" name="date" value="2019-01-01T12:00:00" class="form-control">
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									结束拜访时间
+								</div>
+								<div class="um-list-item-right">
+									<input type="datetime-local" name="date" value="2019-01-01T13:00:00" class="form-control">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<div class="um-list-item-left pl15">
+										申请原因：
+									</div>
+									<div class="um-list-item-right">
+										<textarea name="" id="" cols="30" rows="10" class="form-control"  placeholder="请填写您的申请原因"></textarea>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left tr mr10">
+									上传我的照片
+								</div>
+								<div class="um-list-item-right">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</form>
+				<button id="openDoor" class="btn btn-inline btn-circle">
+					提交申请
+				</button>
+			</div>
+		</div>
+	</body>
+</html>

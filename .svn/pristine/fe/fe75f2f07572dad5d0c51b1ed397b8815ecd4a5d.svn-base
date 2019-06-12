@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.sortlist-2.7.0.css">
+		<link rel="stylesheet" type="text/css" href="../../css/islider.css">
+		<style>
+			.iSlider-wrapper {
+				height: 150px;
+			}
+		</style>
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/jquery.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script type="text/javascript" src="../../js/swipe.js"></script>		
+		<script src="../../js/tenant/myCollectInfo.js"></script>
+		<script type="text/javascript" src="../../js/islider2.js"></script>
+		<script type="text/javascript" src="../../js/knockout-2.2.0.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.sortlist-2.7.0.js"></script>
+	</head>
+	<body>
+		<div class="um-win" id="leaseInfo">
+			<div class="um-header" >
+				<a class="um-back" onclick="goback()"></a>
+				<h3>我的收藏</h3>
+			</div>
+			<div class="um-content" style="margin-top: 0.1rem;margin-bottom:2.09rem;">
+				<div class="um-row">
+					<div id="iSlider-wrapper" class="iSlider-wrapper"></div>
+				</div>
+				<div class="um-leaseinfomsg"><!-- +villageName+buildingName+houseName -->
+					<span class="um-mobilebt" id="houseName" ></span>
+					<div class="um-leaseinfoprise">
+						<div class="infoprise">
+							<span class="writehui">房租(￥/月)</span>
+							<span class="um-red" id="fangzu"></span>
+						</div>
+						<div class="infoprise">
+							<span class="writehui">户型</span>
+							<span class="um-red" id="huxing"></span>
+						</div>
+						<div class="infoprise">
+							<span class="writehui">面积(m²)</span>
+							<span class="um-red" id="mianji"></span>
+						</div>
+					</div>
+										
+				</div>
+				
+				<div class="um-leaseinfomsg02">
+					<div class="um-leasetitle">
+						<span></span>
+						<p>基本信息</p>
+					</div>
+					<div class="leaseinfomsg">
+						<ul>
+							<!-- <li><span class="leasehui">朝向</span><span>朝南</span></li> -->
+							<li><span class="leasehui">楼层</span><span id="louceng"></span></li>
+							<li><span class="leasehui">电梯</span><span id="dianti"></span></li>
+							<li><span class="leasehui">年代</span><span id="niandai"></span></li>
+							<li><span class="leasehui">类型</span><span id="leixing"></span></li>
+							<li><span class="leasehui">绿化</span><span id="lvhua"></span></li>
+						</ul>
+						
+					</div>
+					
+				</div>
+				
+				<div class="um-mobileblock">
+					<div class="um-leasetitle">
+						<span></span>
+						<p>租约信息</p>
+					</div>
+					<div class="leaseinfomsg">						
+						<p><span class="leasehui">入住日期</span><span>可立即入住</span> </p>
+						<p><span class="leasehui">合同签订步骤</span><span class="leaseblue" onclick="signingProcess()">查看详情</span> </p>
+					</div>					
+				</div>
+				<div class="um-mobileblock">
+					<div class="um-leasetitle">
+						<span></span>
+						<p>房源简介</p>
+					</div>
+					<div class="leaseinfobrief ">						
+						<p class="um-leasep" id="fwjj"></p>
+					</div>
+					
+				</div>
+
+			</div>
+			<div class="um-footer" style="position:fixed;bottom:0;width:100%;">
+				<div class="btn-group btn-group-justify">
+					<button type="button" class="btn leasecoll" style="border: 0;" onclick="noCollect()">
+						<span class="btn-noCollection"></span>取消收藏
+					</button>
+					<button id="btn1" type="button" class="btn leasebtnyellow" style="border: 0;" onclick="want()">
+						预约看房
+					</button>
+					<button id="btn2" type="button" class="btn leasebtnhui" style="border: 0; display: none;" >
+						已出租/下架
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

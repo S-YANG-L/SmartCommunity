@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../css/font-icons.css">		
+		<link rel="stylesheet" href="../css/index.css">
+		<link rel="stylesheet" type="text/css" href="../css/iuapmobile.um.listview.css">
+
+		<script src="../js/reset.js"></script>
+		<script src="../js/summer.js" ></script>
+		<script src="../js/jquery.min.js" ></script>
+		<script src="../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../js/knockout.js"></script>
+        <script type="text/javascript" src="../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../js/tenant/serverCenter.js"></script>
+	</head>
+	<body>
+		<div class="um-frame home"  id="serverCenter">						
+			<div class="um-header">	
+				<a class="um-back" onclick="goBack()"></a>
+				<h3>服务中心</h3>
+				<a class="um-header-right" onclick="goServerList()">服务记录</a>
+			</div>
+			<div class="um-content">
+				<div class="um-listview-wrap" id="listview">
+				<ul class="um-service" id="ssl">
+					<!-- <div class="um-servicelist">
+						<div class="um-servicelistzt">						
+							<div class="um-servicemsg">
+								<p class="servicep1">快速预约送水服务</p>
+								<p class="servicep2"><span><img src="../img/phoneicon.png"></span> 13801364883</p>
+								<p class="servicep3"><img src="../img/service03.png" onclick=""></p>
+							</div>
+							<div class="um-serviceimg">
+								<img src="../img/service01.png">
+							</div>
+						</div>
+					</div>  -->
+					
+				</ul>
+				</div>
+					<span id="address" style="display: none"></span>
+					<span id="room" style="display: none"></span>
+				</div>
+		</div>
+	</body>
+</html>

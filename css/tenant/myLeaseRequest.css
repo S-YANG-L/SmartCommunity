@@ -1,0 +1,53 @@
+.um-time {
+	background: #ffffff;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+.um-time-list {
+	height: 46px;
+	line-height: 46px;
+}
+.um-time-list:first-child {
+	border-bottom: 1px solid #dddddd;
+}
+.um-time-txt {
+	float: left;
+	color: #8c8d8e;
+}
+.um-time-list .fr {
+	position: relative;
+	float: right;
+	margin-right: 30px;
+}
+.um-time-list .fr:after {
+	content: "";
+	position: absolute;
+	right: -15px;
+	top: 15px;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-right: 2px solid #8c8d8e;
+	border-top: 2px solid #8c8d8e;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.um-time-list input {
+	display: block;
+	width: 180px;
+	height: 45px;
+	line-height: 45px;
+	border: none;
+	outline: none;
+	text-align: right;
+	background: #fff;
+}
+
+.listview-detail {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+

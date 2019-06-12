@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<link rel="stylesheet" href="../../css/iscroll.css" />
+		<link rel="stylesheet" href="../../css/screen.css">
+		<link rel="stylesheet" type="text/css" href="../../css/iuapmobile.um.listview.css">
+		<style>
+			/* #orders {
+				padding-top: 40px;
+			} */
+			.um-text-overflow {
+				padding-right: 30px
+			}
+			div.notice-body>div {
+        		display:none;
+        		color:#555;
+        	}
+        	div.notice-body>div.active {
+        		display:block;
+        	}    
+		</style>
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/iscroll.js"></script>
+		<script src="../../js/iscrollconfig.js"></script>
+		<script type="text/javascript" src="../../js/knockout.js"></script>
+		<script type="text/javascript" src="../../js/Frameworks/iuapmobile.frameworks.listview.js"></script>
+		<script src="../../js/tenant/myVisitor.js"></script>
+
+	</head>
+	<body>
+		<div class="um-win" id="myVisitor">
+			
+			<div class="um-header" id="re-head">
+				<a class="um-back" onclick="goBack()" ></a>
+				<h3>我的访客</h3>
+			</div>
+			
+			
+			<div id="orders">
+                <ul class="um-tabbar um-tabbar-underline2 pt10 pb10 um-tabbar-switch" style="background: #fff;">
+                	<li class="active" data-tar='.unread'><a>我的申请</a><span></span></li>
+                	<li data-tar='.read'><a onclick="getPageTwo()">我的来客</a><span></span></li>                	
+                </ul>
+                
+				<div class="notice-body">        
+                	<div class="unread active" id="listview">
+						<ul class="um-no-active" data-bind="foreach: data" id="s1">
+						</ul>               	
+                	</div>
+                	<div class="read" id="listview2">
+                		<ul class="um-no-active" data-bind="foreach: data2" id="s2">
+						</ul>  
+					</div>   		
+                </div>
+            </div>
+		</div>	
+		<script>           
+        	$(function () {			 
+        		 /*导航更换js*/
+        		 $('ul.um-tabbar-switch  Li').click(function(){
+        			$(this).addClass('active').siblings('.active').removeClass('active');
+        			var tar=$(this).attr('data-tar');
+        			$(tar).addClass('active').siblings('.active').removeClass('active');
+        		}); 
+        		
+        	});
+        </script>		
+	</body>
+</html>

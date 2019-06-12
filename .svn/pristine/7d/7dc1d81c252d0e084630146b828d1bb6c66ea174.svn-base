@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title>维修评价</title>
+		<link rel="stylesheet" href="../../css/iuapmobile.um.css">
+		<link rel="stylesheet" href="../../css/font-icons.css">
+		<script src="../../js/reset.js"></script>
+		<script src="../../js/jquery.min.js" ></script>
+		<script src="../../js/Frameworks/iuapmobile.frameworks.ui.js" ></script>
+		<script src="../../js/summer.js" ></script>
+		<script src="../../js/tenant/repair.js"></script>
+		<script src="../../js/tenant/repairEvalute.js"></script>
+
+	</head>
+	<body>
+		<div class="um-win" id="repairEvalute">
+			<div class="um-header header" um-water>
+				<a class="um-back" onclick="goRepairDtl()"></a>
+				<h3>维修评价</h3>
+			</div>
+			<div>
+				<div class="repari-head">
+					<span><img src="../../img/repari-head.png"></span>
+					<p id="name"></p>
+				</div>
+				<div class="repari-star">
+					<div class="repari-starbt">
+						<span class="my-homebtleft um-mobilebt32" id="id" style="display: none"></span>
+    					<span class="my-homebtleft um-mobilebt32" id="position"></span>  
+    					<span class="my-homebtleft um-mobilebt32" id="fraction" style="display: none"></span> 					
+    				</div>
+    				<div class="repari-starbody" id="rank">
+    					<ul>
+					    	<li>　</li>
+					        <li>　</li>
+					        <li>　</li>
+					        <li>　</li>
+					        <li>　</li>
+						</ul>
+    				</div>
+					
+				</div>
+				
+				<div class="lease-text">
+						<span>反馈意见</span>                       
+                         <textarea name="" id="evaCont" class="form-control repari-msgtext" placeholder="请输入您的宝贵意见，我们会更加完善服务"></textarea>                                                                
+					</div>
+				
+				
+               <div style="text-align: center;margin-top: 1.5rem;">
+					<button id="" class="bluebutton" onclick="addEvaluate()">提交评价</button>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			window.onload=function(){
+				var oDiv=document.getElementById('rank');
+				var aLi=oDiv.getElementsByTagName('li');
+				var oP=oDiv.getElementsByTagName('p')[0];
+				var arrText=['不满意','较不满意','一般','较满意','满意','非常满意'];
+				var num=0;
+				
+				for(var i=0;i<=aLi.length;i++){
+					aLi[i].index=i;		
+					aLi[i].onclick=function(){
+						//alert(arrText[this.index+1]);
+						$("#fraction").text(this.index+1);				
+						for(i=0;i<=this.index;i++){
+							aLi[i].className='hover';	
+						};
+						$(this).nextAll().removeClass("hover");
+						
+					};	
+				};
+				
+			}
+		</script>
+	</body>
+</html>
